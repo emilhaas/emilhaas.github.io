@@ -1,4 +1,4 @@
-url: 
+url: emilhaas.github.io
 baseurl:
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
