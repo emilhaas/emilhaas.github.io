@@ -1,0 +1,21 @@
+---
+name: "Casa 1"
+latitude: "43.538153"
+longitude: "-6.344464"
+estado: "Rel. buen estado"
+city: "Gallinero"
+art: "Casa, Horreo"
+description: "Antigua casa de piedra en gallinero. Paredes de mampostería en seco y tejado de teja y piedra."
+option: ""
+images:
+  - src: "DSC09125.JPG"
+    alt: "test"
+  - src: "DSC09141.JPG"
+    alt: "test"
+  - src: "DSC09143.JPG"
+    alt: "test"
+  - src: "DSC09168.JPG"
+    alt: "test"
+  - src: "DSC09189.JPG"
+    alt: "test"
+---

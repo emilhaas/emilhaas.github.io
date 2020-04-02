@@ -1,0 +1,10 @@
+[
+{% for ruina in site.ruinas %}
+  {
+        "name"    : "{{ ruina.name }}",
+        "latitude"     : "{{ ruina.latitude }}",
+        "longitude"     : "{{ ruina.longitude }}",
+        "description"     : "{{ ruina.description }}",
+      } {% if forloop.last %}{% else %},{% endif %}
+  {% endfor %}
+  ]

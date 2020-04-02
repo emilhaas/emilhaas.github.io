@@ -1,0 +1,21 @@
+---
+name: "Anexo2"
+latitude: "43.547626"
+longitude: "-6.386215"
+estado: "Mal estado"
+city: "Cadavedo"
+art: "Grupo anexo"
+description: "Los edificios estan tan comidos por la maleza que prácticamente no se distingue de que tipo son. Es probable que se trate de tres vivendas de pequeño tamaño."
+option: ""
+images:
+  - src: "DSC09340.JPG"
+    alt: "test"
+  - src: "DSC09341.JPG"
+    alt: "test"
+  - src: "DSC09342.JPG"
+    alt: "test"
+  - src: "DSC09343.JPG"
+    alt: "test"
+  - src: "DSC09344.JPG"
+    alt: "test"
+---

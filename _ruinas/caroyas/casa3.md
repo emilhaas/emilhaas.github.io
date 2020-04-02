@@ -1,0 +1,23 @@
+---
+name: "Casa 3"
+latitude: "43.547117"
+longitude: "-6.477487"
+estado: "Rel. mal estado"
+city: "Caroyas"
+art: "Casa"
+description: "Casa con anexo en Caroyas. Ventanas y tejado en buen estado. El anexo tiene el tejado caído."
+option: ""
+images:
+  - src: "DSC09075.JPG"
+    alt: "test"
+  - src: "DSC09076.JPG"
+    alt: "test"
+  - src: "DSC09077.JPG"
+    alt: "test"
+  - src: "DSC09078.JPG"
+    alt: "test"
+  - src: "DSC09079.JPG"
+    alt: "test"
+  - src: "DSC09086.JPG"
+    alt: "test"    
+---

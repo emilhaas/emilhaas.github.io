@@ -1,0 +1,74 @@
+url: 
+baseurl:
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+navigation:
+  - title: Tipo
+    url: /tipo/
+  - title: Poblicaion
+    url: /poblication/
+  - title: Mapa
+    url: /mapa/
+  - title: Estado
+    url: /estado/
+authors:
+  roman:
+    display_name: Emil Haas
+prose:
+  ignore:
+    - _includes
+    - _layouts
+    - pages
+    - .gitignore
+    - _config.yml
+    - CNAME
+    - Gemfile
+    - README.md
+    - _scss/
+encoding: UTF-8
+collections:
+    ruinas:
+      output: true
+
+sass:
+  sass_dir:          _scss
+  style:            :compressed
+permalink: blog/:title
+defaults:
+  -
+    scope:
+      path: '' # an empty string here means all files in the project
+      type: posts # previously `post` in Jekyll 2.2.
+    values:
+      layout: post
+  -
+    scope:
+      path: '' # an empty string here means all files in the project
+      type: ruinas # previously `post` in Jekyll 2.2.
+    values:
+      layout: ruinas
+sitemap:
+    filename: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+        - "/feed/index.xml"
+    include_posts:
+        - "/index.html"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"
+# seo
+title: "Ruinas de Valdés"
+description: bli bla blu
+twitter:
+  username: ruinas
+logo: "hhh"
+social:
+  name: Emil Haas
+  links:
+
+google_site_verification:  asdasd

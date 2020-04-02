@@ -1,0 +1,45 @@
+---
+layout: default
+permalink: /mapa
+---
+<div id="map"  style="box-sizing: border-box; min-height: calc(100vh - 60px);" class=" uk-height-max-large"></div>
+
+
+
+
+<script>
+
+
+var ruinas = {% include locations.json %};
+
+
+      function initMap() {
+
+
+        var asturias = {lat: 43.2710635, lng: -6.9676839};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: asturias,
+          mapTypeId: 'satellite'
+        });
+        map.setTilt(45);
+
+        for (var i = 0; i < ruinas.length; i++ ) {
+
+        var position = new google.maps.LatLng(ruinas[i].latitude, ruinas[i].longitude);
+        marker = new google.maps.Marker({
+				position: position,
+				map: map,
+        name: ruinas[i].name,
+        title: ruinas[i].title
+			});
+
+        }
+
+      }
+    </script>
+
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt80i18onouvdKKG0xTR2Jon8dW2VTJj8&callback=initMap">
+    </script>

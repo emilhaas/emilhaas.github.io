@@ -1,0 +1,23 @@
+---
+name: "Casa 1"
+latitude: "43.544585"
+longitude: "-6.477955"
+estado: "Rel. mal estado"
+city: "Caroyas"
+art: "Casa"
+description: "Casa grande en el centro de Caroyas. El tejado, de teja, está en mal estado en algunas partes."
+option: ""
+images:
+  - src: "DSC09033.JPG"
+    alt: "test"
+  - src: "DSC09035.JPG"
+    alt: "test"
+  - src: "DSC09036.JPG"
+    alt: "test"
+  - src: "DSC09037.JPG"
+    alt: "test"
+  - src: "DSC09038.JPG"
+    alt: "test"
+  - src: "DSC09039.JPG"
+    alt: "test"    
+---

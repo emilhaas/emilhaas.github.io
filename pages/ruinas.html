@@ -1,0 +1,12 @@
+---
+layout: default
+permalink:  /ruinas/
+---
+<div class="uk-container">
+<div class="uk grid uk-grid-match uk-child-width-1-4" uk-grid>
+{% for ruinas in site.ruinas %}
+{% assign images = ruinas.images | first %}
+<div class="uk-card"><a href="/ruinas/{{ruinas.city}}/{{ruinas.name}}"><img src="/img/{{ruinas.city}}/{{ruinas.name | %}}/{{ images.src }}" alt=""></a></div>
+{% endfor %}
+</div>
+</div>

@@ -1,0 +1,23 @@
+---
+name: "Casa 5"
+latitude: "43.544893"
+longitude: "-6.477824"
+estado: "Rel. Buen estado"
+city: "Caroyas"
+art: "Casa"
+description: "Antigua casa en el centro de Caroyas, se encuentra a la venta. Cuenta con una caseta de piedra y un jardín con frutales y hortensias."
+option: ""
+images:
+  - src: "DSC09027.JPG"
+    alt: "test"
+  - src: "DSC09028.JPG"
+    alt: "test"
+  - src: "DSC09029.JPG"
+    alt: "test"
+  - src: "DSC09030.JPG"
+    alt: "test"
+  - src: "DSC09031.JPG"
+    alt: "test"
+  - src: "DSC09032.JPG"
+    alt: "test"    
+---

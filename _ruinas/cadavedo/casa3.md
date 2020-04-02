@@ -1,0 +1,23 @@
+---
+name: "Casa3"
+latitude: "43.551503"
+longitude: "-6.379429"
+estado: "Rel.buen estado"
+city: "Cadavedo"
+art: "Casa"
+description: "Pequeña casa a una altura con bonitas paredes antiguas de piedra. El tejado está dividido en dos partes, una de teja y otra de pizarra. Ambas en buen estado. Es posible que esté siendo utilizada como gallinero."
+option: ""
+images:
+  - src: "DSC09312.JPG"
+    alt: "test"
+  - src: "DSC09313.JPG"
+    alt: "test"
+  - src: "DSC09314.JP"
+    alt: "test"
+  - src: "DSC09315.JPG"
+    alt: "test"
+  - src: "DSC09316.JPG"
+    alt: "test"
+  - src: "DSC09317.JPG"
+    alt: "test"    
+---

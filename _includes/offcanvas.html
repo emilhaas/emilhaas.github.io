@@ -1,0 +1,14 @@
+<div class="uk-panel">
+<ul class="uk-nav uk-nav-default tm-nav">
+  {% for item in site.navigation %}
+  {% assign class = nil %}
+  {% if page.url contains item.url %}
+  {% assign class = 'uk-active' %}
+  {% endif %}
+  <li class="dropdown {{ class }}"><a href="{{ site.baseurl }}{{ item.url }}">
+          {{ item.title }}
+      </a>
+  </li>
+  {% endfor %}
+
+      </ul></div>

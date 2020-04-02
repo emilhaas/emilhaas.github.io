@@ -1,0 +1,23 @@
+---
+name: "Casa1"
+latitude: "43.553300"
+longitude: "-6.383082"
+estado: "Mal estado"
+city: "Cadavedo"
+art: "Casa"
+description: "Antiguo edificio totalmente invadido por la maleza. Casa de forma alargada, en primera linea de rasa costera. Las paredes se encuentran en buen estado en algunas zonas visibles, pero no se puede decir con seguridad que así sea en otras zonas. Solo paredes, no hay suelos, ventanas ni tejado."
+option: ""
+images:
+  - src: "DSC09294.JPG"
+    alt: "test"
+  - src: "DSC09295.JPG"
+    alt: "test"
+  - src: "DSC09296.JPG"
+    alt: "test"
+  - src: "DSC09297.JPG"
+    alt: "test"
+  - src: "DSC09298.JPG"
+    alt: "test"
+  - src: "DSC09299.JPG"
+    alt: "test"    
+---

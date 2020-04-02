@@ -1,0 +1,23 @@
+---
+name: "Casona"
+latitude: "43.543652"
+longitude: "-6.478440"
+estado: "Rel. buen estado"
+city: "Caroyas"
+art: "Casona"
+description: "Enorme edificio a la entrada de Caroyas. Se encuentra a la venta. Sólamente las ventanas se encuentran en mal estado."
+option: ""
+images:
+  - src: "DSC09040.JPG"
+    alt: "test"
+  - src: "DSC09042.JPG"
+    alt: "test"
+  - src: "DSC09044.JPG"
+    alt: "test"
+  - src: "DSC09046.JPG"
+    alt: "test"
+  - src: "DSC09048.JPG"
+    alt: "test"
+  - src: "DSC09050.JPG"
+    alt: "test"    
+---

@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="uk-container">
+  <article class="uk-article">
+
+      <h1 class="uk-article-title"><a class="uk-link-reset" href="">{{page.art}} in {{page.city}}</a></h1>
+
+      <p class="uk-article-meta">{{page.name}}</p>
+
+
+
+      <p>{{page.description}}</p>
+
+      <div uk-slideshow>
+    <ul class="uk-slideshow-items">
+        <li>
+            <img src="" alt="" uk-cover>
+        </li>
+    </ul>
+</div>
+
+      <div class="uk-child-width-1-6@m" uk-grid uk-lightbox="animation: slide">
+        {% for image in page.images %}
+          <div>
+              <a class="uk-inline" href="/img/{{page.city}}/{{page.name}}/{{image.src}}" caption="{{image.alt}}">
+                  <img src="/img/{{page.city}}/{{page.name}}/{{image.src}}"alt="">
+              </a>
+          </div>
+
+          {% endfor %}
+
+      </div>
+
+  </article>
+
+
+
+  <ul class="uk-pagination">
+    {% if page.previous.url %}
+      <li><a href="{{page.previous.url}}"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</a></li>
+        {% endif %}
+        {% if page.next.url %}
+      <li class="uk-margin-auto-left"><a href="{{page.next.url}}">Next <span class="uk-margin-small-left" uk-pagination-next></span></a></li>
+        {% endif %}
+  </ul>

@@ -1,0 +1,23 @@
+---
+name: "Casa 4"
+latitude: "43.547747"
+longitude: "-6.477912"
+estado: "Rel. mal estado"
+city: "Caroyas"
+art: "Casa"
+description: "Antigua casa en caroyas. Bonita mampostería. Mucha maleza, pero paredes en buen estado. Tiene un horreo al lado y un grande jardin delante que da directamente a los prados de la rasa costera."
+option: ""
+images:
+  - src: "DSC09080.JPG"
+    alt: "test"
+  - src: "DSC09081.JPG"
+    alt: "test"
+  - src: "DSC09082.JPG"
+    alt: "test"
+  - src: "DSC09083.JPG"
+    alt: "test"
+  - src: "DSC09084.JPG"
+    alt: "test"
+  - src: "DSC09085.JPG"
+    alt: "test"    
+---
