@@ -14,10 +14,7 @@ layout: default
 {{page.estado}} <br/>{{page.city}}
 
 
-      images:
-        - src: "DSC09420.JPG"
-          alt: "test"
-
+  
       <p>{{page.description}}</p>
 
       <div uk-slideshow>
@@ -32,7 +29,7 @@ layout: default
         {% for image in page.images %}
           <div>
               <a class="uk-inline" href="/images/{{image.src}}" caption="{{image.alt}}">
-                  <img src="/images/{{image.src}}"alt="">
+                  <img src="/images/{{image.src}}" alt="">
               </a>
           </div>
 
