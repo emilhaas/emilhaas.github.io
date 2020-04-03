@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+<div id="map"></div>
+
 
 <div class="uk-container">
   <article class="uk-article">
@@ -16,25 +18,6 @@ layout: default
 
 
       <p>{{page.description}}</p>
-
-
-
-
-      <div id="map"></div>
-
-
-      <div uk-slideshow>
-    <ul class="uk-slideshow-items">
-      {% for image in page.images | first %}
-        <li>
-            <img src="/images/{{image.src}}" alt="" uk-cover>
-        </li>
-
-        {% endfor %}
-
-    </ul>
-</div>
-
       <div class="uk-child-width-1-6@m" uk-grid uk-lightbox="animation: slide">
         {% for image in page.images %}
           <div>
@@ -46,6 +29,14 @@ layout: default
           {% endfor %}
 
       </div>
+
+
+
+
+
+
+
+
 
   </article>
 
