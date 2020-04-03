@@ -14,14 +14,18 @@ layout: default
 {{page.estado}} <br/>{{page.city}}
 
 
-  
+
       <p>{{page.description}}</p>
 
       <div uk-slideshow>
     <ul class="uk-slideshow-items">
+      {% for image in page.images | first %}
         <li>
-            <img src="" alt="" uk-cover>
+            <img src="/images/{{image.src}}" alt="" uk-cover>
         </li>
+
+        {% endfor %}
+
     </ul>
 </div>
 
