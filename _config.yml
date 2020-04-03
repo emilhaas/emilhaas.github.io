@@ -33,7 +33,7 @@ encoding: UTF-8
 collections:
     ruinas:
       output: true
-      permalink: /:collection/:name
+      permalink: /:collection/:path
 
 
 sass:
