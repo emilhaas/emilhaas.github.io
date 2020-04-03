@@ -29,16 +29,13 @@
 
  <script>
    var map;
- require(["esri/map"], function(Map) {
+   require(["esri/map", "dojo/domReady!"], function(Map) {
    map = new Map("map", {
-     basemap: "gray",
+     basemap: "dark-gray",
      center: [{{page.longitude}}, {{page.latitude}}],
      zoom: 10
    });
- });
-
-
-   });
+      });
  </script>
 
 
