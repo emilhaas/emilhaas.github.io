@@ -48,7 +48,7 @@ defaults:
   -
     scope:
       path: '' # an empty string here means all files in the project
-      type: ruinas # previously `post` in Jekyll 2.2.
+      type: "ruinas" # previously `post` in Jekyll 2.2.
     values:
       layout: ruinas
 sitemap:
