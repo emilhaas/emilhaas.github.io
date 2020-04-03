@@ -27,88 +27,27 @@
 <link rel="stylesheet" href="https://js.arcgis.com/3.31/esri/css/esri.css">
 <script src="https://js.arcgis.com/3.31/"></script>
 
+ <script>
+   var map;
+   require([
+        "esri/Map",
+        "esri/views/MapView",
+        "esri/Graphic",
+        "esri/layers/GraphicsLayer"
+      ], function(Map, MapView, Graphic, GraphicsLayer) {
+      map = new Map("map", {
+     basemap: "dark-gray",
+     center: [{{page.longitude}}, {{page.latitude}}],
+     zoom: 10
+   });
 
 
-<script>
-  require([
-    "esri/Map",
-    "esri/layers/GeoJSONLayer",
-    "esri/views/MapView"
-  ], function(Map, GeoJSONLayer, MapView) {
-    // If GeoJSON files are not on the same domain as your website, a CORS enabled server
-    // or a proxy is required.
-    const url =
-      "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
 
-    // Paste the url into a browser's address bar to download and view the attributes
-    // in the GeoJSON file. These attributes include:
-    // * mag - magnitude
-    // * type - earthquake or other event such as nuclear test
-    // * place - location of the event
-    // * time - the time of the event
-    // Use the Arcade Date() function to format time field into a human-readable format
+ });
 
-    const template = {
-      title: "Earthquake Info",
-      content: "Magnitude {mag} {type} hit {place} on {time}",
-      fieldInfos: [
-        {
-          fieldName: "time",
-          format: {
-            dateFormat: "short-date-short-time"
-          }
-        }
-      ]
-    };
 
-    const renderer = {
-      type: "simple",
-      field: "mag",
-      symbol: {
-        type: "simple-marker",
-        color: "orange",
-        outline: {
-          color: "white"
-        }
-      },
-      visualVariables: [
-        {
-          type: "size",
-          field: "mag",
-          stops: [
-            {
-              value: 2.5,
-              size: "4px"
-            },
-            {
-              value: 8,
-              size: "40px"
-            }
-          ]
-        }
-      ]
-    };
+ </script>
 
-    const geojsonLayer = new GeoJSONLayer({
-      url: url,
-      copyright: "USGS Earthquakes",
-      popupTemplate: template,
-      renderer: renderer //optional
-    });
-
-    const map = new Map({
-      basemap: "dark-gray",
-      layers: [geojsonLayer]
-    });
-
-    const view = new MapView({
-      container: "map",
-      center: [{{page.longitude}}, {{page.latitude}}],
-      zoom: 3,
-      map: map
-    });
-  });
-</script>
 
 <style>
   h1, h2, h3, h4, h5 {font-family: 'Gentium Basic', serif !important;}
