@@ -28,14 +28,43 @@
 <script src="https://js.arcgis.com/3.31/"></script>
 
  <script>
-   var map;
- require(["esri/map"], function(Map) {
-   map = new Map("map", {
-     basemap: "topo",
-     center: [{{page.longitude}}, {{page.latitude}}],
-     zoom: 13
-   });
- });
+   var map, csv;
+ require([
+        "esri/map",
+        "esri/layers/CSVLayer",
+        "esri/Color",
+        "esri/symbols/SimpleMarkerSymbol",
+        "esri/renderers/SimpleRenderer",
+        "esri/InfoTemplate",
+        "esri/config",
+        "dojo/domReady!"
+      ], function(
+        Map, CSVLayer, Color, SimpleMarkerSymbol, SimpleRenderer, InfoTemplate, esriConfig
+      ) {
+
+        // Use CORS
+        esriConfig.defaults.io.corsEnabledServers.push("earthquake.usgs.gov"); // supports CORS
+
+        // Use proxy if the server doesn't support CORS
+        // esriConfig.defaults.io.proxyUrl = "/proxy/";
+
+        map = new Map("map", {
+          basemap: "gray",
+          center: [{{page.longitude}}, {{page.latitude}}],
+          zoom: 4
+        });
+        csv = new CSVLayer("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.csv", {
+          copyright: "USGS.gov"
+        });
+        var orangeRed = new Color([238, 69, 0, 0.5]); // hex is #ff4500
+        var marker = new SimpleMarkerSymbol("solid", 15, null, orangeRed);
+        var renderer = new SimpleRenderer(marker);
+        csv.setRenderer(renderer);
+        var template = new InfoTemplate("${type}", "${place}");
+        csv.setInfoTemplate(template);
+        map.addLayer(csv);
+      });
+    </script>
  </script>
 
 
