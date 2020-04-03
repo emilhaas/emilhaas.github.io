@@ -2,38 +2,13 @@
 {% assign tipo = {{site.ruinas | group_by:"art"}} %}
 
 <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
-    <div class="uk-navbar-center">
+    <div class="uk-navbar-left">
 
         <ul class="uk-navbar-nav">
           <li>
-              <a href="/">Home</a>
+              <a href="/"><h2>Ruinas de Valdés</h2></a>
           </li>
-            <li>
-                <a href="#">Pueblos</a>
-                <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      {% for item in pueblos %}
-                      <li><a href="{{item.url}}">{{item.name}}</a> <span class="uk-badge">{{item.items.size}}</span></li>
-                      {% endfor %}
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="#">Tipo</a>
-                <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      {% for item in tipo %}
-                      <li><a href="{{item.url}}">{{item.name}} <span class="uk-badge">{{item.items.size}}</span></a> </li>
-                      {% endfor %}
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="/mapa">Mapa</a>
-            </li>
-            <li>
-                <a href="/ultimo">Último</a>
-            </li>
+      
         </ul>
 
     </div>

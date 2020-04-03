@@ -2,6 +2,30 @@
 layout: default
 permalink:  /ruinas/
 ---
+<li>
+    <a href="#">Pueblos</a>
+    <div class="uk-navbar-dropdown">
+        <ul class="uk-nav uk-navbar-dropdown-nav">
+          {% for item in pueblos %}
+          <li><a href="{{item.url}}">{{item.name}}</a> <span class="uk-badge">{{item.items.size}}</span></li>
+          {% endfor %}
+        </ul>
+    </div>
+</li>
+<li>
+    <a href="#">Tipo</a>
+    <div class="uk-navbar-dropdown">
+        <ul class="uk-nav uk-navbar-dropdown-nav">
+          {% for item in tipo %}
+          <li><a href="{{item.url}}">{{item.name}} <span class="uk-badge">{{item.items.size}}</span></a> </li>
+          {% endfor %}
+        </ul>
+    </div>
+</li>
+
+<li>
+    <a href="/ultimo">Último</a>
+</li>
 <div class="uk-container">
 <div class="uk grid uk-grid-match uk-child-width-1-4" uk-grid>
 {% for ruinas in site.ruinas %}
