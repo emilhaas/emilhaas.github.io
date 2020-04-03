@@ -67,3 +67,8 @@ permalink: /
     </div>
 
   </div>
+
+
+  {% for ruinas in site.ruinas %}
+<a href="/ruinas/{{ruinas.city}}/{{ruinas.name}}">{{ruinas.name}}</a>
+  {% endfor %}
