@@ -33,7 +33,7 @@ encoding: UTF-8
 collections:
 
 
-    ruinas2:
+    ruinas:
       output: true
       permalink: /:collection/:path
 
@@ -52,7 +52,7 @@ defaults:
   -
     scope:
       path: '' # an empty string here means all files in the project
-      type: "ruinas2" # previously `post` in Jekyll 2.2.
+      type: "ruinas" # previously `post` in Jekyll 2.2.
     values:
       layout: ruinas
 sitemap:
