@@ -24,29 +24,17 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Gentium+Basic:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
 
-<link
-    rel="stylesheet"
-    href="https://js.arcgis.com/4.14/esri/themes/light/main.css"
-  />
-  <script src="https://js.arcgis.com/4.14/"></script>
+<link rel="stylesheet" href="https://js.arcgis.com/3.31/esri/css/esri.css">
+<script src="https://js.arcgis.com/3.31/"></script>
+
  <script>
    var map;
-   require([
-        "esri/Map",
-        "esri/views/MapView",
-        "esri/Graphic",
-        "esri/layers/GraphicsLayer"
-      ], function(Map, MapView, Graphic, GraphicsLayer) {
-      map = new Map("map", {
+   require(["esri/map", "dojo/domReady!"], function(Map) {
+   map = new Map("map", {
      basemap: "dark-gray",
      center: [{{page.longitude}}, {{page.latitude}}],
      zoom: 10
    });
-
-
-
- });
-
 
  </script>
 
