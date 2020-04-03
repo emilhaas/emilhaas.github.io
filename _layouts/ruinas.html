@@ -10,6 +10,13 @@ layout: default
       <p class="uk-article-meta">{{page.name}}</p>
 
 
+{{page.latitude}} {{page.longitude}} <br/>
+{{page.estado}} <br/>{{page.city}}
+
+
+      images:
+        - src: "DSC09420.JPG"
+          alt: "test"
 
       <p>{{page.description}}</p>
 
@@ -24,8 +31,8 @@ layout: default
       <div class="uk-child-width-1-6@m" uk-grid uk-lightbox="animation: slide">
         {% for image in page.images %}
           <div>
-              <a class="uk-inline" href="/img/{{page.city}}/{{page.name}}/{{image.src}}" caption="{{image.alt}}">
-                  <img src="/img/{{page.city}}/{{page.name}}/{{image.src}}"alt="">
+              <a class="uk-inline" href="/images/{{image.src}}" caption="{{image.alt}}">
+                  <img src="/images/{{image.src}}"alt="">
               </a>
           </div>
 
