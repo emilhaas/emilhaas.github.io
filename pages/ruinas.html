@@ -2,6 +2,11 @@
 layout: default
 permalink:  /ruinas/
 ---
+{% assign pueblos = {{site.ruinas | group_by:"city"}} %}
+{% assign tipo = {{site.ruinas | group_by:"art"}} %}
+
+
+
 <li>
     <a href="#">Pueblos</a>
     <div class="uk-navbar-dropdown">
@@ -25,7 +30,7 @@ permalink:  /ruinas/
 
 
 <div class="uk-container">
-<div class="uk grid uk-grid-match uk-child-width-1-4" uk-grid>
+<div class="uk grid uk-grid-match uk-child-width-1-1" uk-grid>
 {% for ruinas in site.ruinas %}
 {% assign images = ruinas.images | first %}
 <div class="uk-card"><a href="{{ruinas.url}}"><img src="/images/{{ images.src }}" alt="">{{ruinas.name}}</a></div>
