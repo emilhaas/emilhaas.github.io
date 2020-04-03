@@ -6,7 +6,7 @@ permalink:  /ruinas/
 <div class="uk grid uk-grid-match uk-child-width-1-4" uk-grid>
 {% for ruinas in site.ruinas %}
 {% assign images = ruinas.images | first %}
-<div class="uk-card"><a href="/ruinas/{{ruinas.city}}/{{ruinas.name}}"><img src="/img/{{ruinas.city}}/{{ruinas.name | %}}/{{ images.src }}" alt=""></a></div>
+<div class="uk-card"><a href="{{ruinas.url}}"><img src="/images/{{ images.src }}" alt="">{{ruinas.name}}</a></div>
 {% endfor %}
 </div>
 </div>
