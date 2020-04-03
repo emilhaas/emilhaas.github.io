@@ -24,26 +24,20 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Gentium+Basic:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://js.arcgis.com/4.14/esri/themes/light/main.css">
- <script src="https://js.arcgis.com/4.14/"></script>
+<link rel="stylesheet" href="https://js.arcgis.com/3.31/esri/css/esri.css">
+<script src="https://js.arcgis.com/3.31/"></script>
 
  <script>
-   require([
-     "esri/Map",
-     "esri/views/MapView",
-   ], function(Map, MapView) {
+   var map;
+ require(["esri/map"], function(Map) {
+   map = new Map("map", {
+     basemap: "topo",
+     center: [{{page.latitude}}, {{page.longitude}}],
+     zoom: 13
+   });
+ });
 
-     var map = new Map({
-       basemap: "topo-vector"
-     });
-
-     var view = new MapView({
-       container: "viewDiv",
-       map: map,
-       center: [{{page.latitude}}, {{page.longitude}}],
-       zoom: 13
-     });
-
+  
    });
  </script>
 
