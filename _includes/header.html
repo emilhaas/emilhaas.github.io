@@ -27,92 +27,88 @@
 <link rel="stylesheet" href="https://js.arcgis.com/3.31/esri/css/esri.css">
 <script src="https://js.arcgis.com/3.31/"></script>
 
- <script>
-  
 
- require([
-  "esri/Map",
-  "esri/layers/GeoJSONLayer",
-  "esri/views/MapView"
-], function(Map, GeoJSONLayer, MapView) {
-  // If GeoJSON files are not on the same domain as your website, a CORS enabled server
-  // or a proxy is required.
-  const url =
-    "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
 
-  // Paste the url into a browser's address bar to download and view the attributes
-  // in the GeoJSON file. These attributes include:
-  // * mag - magnitude
-  // * type - earthquake or other event such as nuclear test
-  // * place - location of the event
-  // * time - the time of the event
-  // Use the Arcade Date() function to format time field into a human-readable format
+<script>
+  require([
+    "esri/Map",
+    "esri/layers/GeoJSONLayer",
+    "esri/views/MapView"
+  ], function(Map, GeoJSONLayer, MapView) {
+    // If GeoJSON files are not on the same domain as your website, a CORS enabled server
+    // or a proxy is required.
+    const url =
+      "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
 
-  const template = {
-    title: "Earthquake Info",
-    content: "Magnitude {mag} {type} hit {place} on {time}",
-    fieldInfos: [
-      {
-        fieldName: "time",
-        format: {
-          dateFormat: "short-date-short-time"
-        }
-      }
-    ]
-  };
+    // Paste the url into a browser's address bar to download and view the attributes
+    // in the GeoJSON file. These attributes include:
+    // * mag - magnitude
+    // * type - earthquake or other event such as nuclear test
+    // * place - location of the event
+    // * time - the time of the event
+    // Use the Arcade Date() function to format time field into a human-readable format
 
-  const renderer = {
-    type: "simple",
-    field: "mag",
-    symbol: {
-      type: "simple-marker",
-      color: "orange",
-      outline: {
-        color: "white"
-      }
-    },
-    visualVariables: [
-      {
-        type: "size",
-        field: "mag",
-        stops: [
-          {
-            value: 2.5,
-            size: "4px"
-          },
-          {
-            value: 8,
-            size: "40px"
+    const template = {
+      title: "Earthquake Info",
+      content: "Magnitude {mag} {type} hit {place} on {time}",
+      fieldInfos: [
+        {
+          fieldName: "time",
+          format: {
+            dateFormat: "short-date-short-time"
           }
-        ]
-      }
-    ]
-  };
+        }
+      ]
+    };
 
-  const geojsonLayer = new GeoJSONLayer({
-    url: url,
-    copyright: "USGS Earthquakes",
-    popupTemplate: template,
-    renderer: renderer //optional
-  });
+    const renderer = {
+      type: "simple",
+      field: "mag",
+      symbol: {
+        type: "simple-marker",
+        color: "orange",
+        outline: {
+          color: "white"
+        }
+      },
+      visualVariables: [
+        {
+          type: "size",
+          field: "mag",
+          stops: [
+            {
+              value: 2.5,
+              size: "4px"
+            },
+            {
+              value: 8,
+              size: "40px"
+            }
+          ]
+        }
+      ]
+    };
 
-  const map = new Map({
-    basemap: "gray",
-    layers: [geojsonLayer]
-  });
+    const geojsonLayer = new GeoJSONLayer({
+      url: url,
+      copyright: "USGS Earthquakes",
+      popupTemplate: template,
+      renderer: renderer //optional
+    });
 
-  const view = new MapView({
-    container: "viewDiv",
-    center: [{{page.longitude}}, {{page.latitude}}],
-    zoom: 10,
-    map: map
+    const map = new Map({
+      basemap: "dark-gray",
+      layers: [geojsonLayer]
+    });
+
+    const view = new MapView({
+      container: "map",
+      center: [{{page.longitude}}, {{page.latitude}}],
+      zoom: 3,
+      map: map
+    });
   });
-});
 </script>
-
-
- </script>
-
 
 <style>
   h1, h2, h3, h4, h5 {font-family: 'Gentium Basic', serif !important;}
