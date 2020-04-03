@@ -1,7 +1,7 @@
 url: https://emilhaas.github.io
 baseurl:
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+permalink: /blog/:title
 gems:
   - jekyll-sitemap
   - jekyll-feed
