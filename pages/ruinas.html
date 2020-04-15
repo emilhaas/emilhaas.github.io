@@ -11,6 +11,21 @@ permalink:  /ruinas/
 
 
   <div class="uk-container">
+
+    <ul>
+    {% for ruina in site.data.ruinas %}
+      <li>
+          {{ ruina.name }}
+          {{ ruina.long }}
+          {{ ruina.lat }}
+          {{ ruina.pics }}
+
+
+      </li>
+    {% endfor %}
+    </ul>
+
+
 <div class="uk-grid-small uk-flex uk-flex-middle" uk-grid>
 
     <div class="uk-width-2-3@m uk-width-1-1">
