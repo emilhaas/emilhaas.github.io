@@ -1,0 +1,15 @@
+---
+layout: none
+permalink: /ruinas.json
+---
+
+[
+{% for ruina in site.data.ruinas %}
+  {
+        "name"    : "{{ ruina.name }}",
+        "latitude"     : "{{ ruina.lat }}",
+        "longitude"     : "{{ ruina.long }}",
+        "pics"     : "{{ ruina.pics }}",
+      } {% if forloop.last %}{% else %},{% endif %}
+  {% endfor %}
+  ]
