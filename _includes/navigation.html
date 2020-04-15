@@ -1,37 +1,32 @@
 {% assign pueblos = {{site.ruinas | group_by:"city"}} %}
 {% assign tipo = {{site.ruinas | group_by:"art"}} %}
 
-<nav class="uk-navbar-container" uk-navbar="mode: click" style="background-color:white;height: 60px;">
-    <div class="uk-navbar-left">
+
+<nav class="uk-navbar-container" uk-navbar="mode: click">
+    <div class="uk-navbar-center">
 
         <ul class="uk-navbar-nav">
-          <li>
-              <a href="/"><h3>Ruinas de Valdés</h3></a>
-          </li>
+            <li class="uk-active"> <a href="/"><span uk-icon="home"></span>
+</a>/li>
+
 
         </ul>
 
-    </div>
-
-    <div class="uk-navbar-right">
-      <button class="uk-button" uk-icon="more-vertical" type="button" uk-toggle="target: #offcanvas-nav-primary"></button>
     </div>
 </nav>
 
 
-<div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
-    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+<nav class="uk-navbar-container" uk-navbar="mode: click">
+    <div class="uk-navbar-center">
 
-        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-            <li class="uk-active">        <a href="/ruinas">Ver ruinas</a></li>
-            <li class="uk-active">              <a href="/about">Sobre Nosotros</a>
-</li>
-            <li class="uk-active">          <a href="/ultimo">Último</a></li>
-            <li class="uk-active">              <a href="mailto:emilhm@gmx.at">Contacto</a>
-</li>
+        <ul class="uk-navbar-nav">
+            <li class="uk-active"> <a href="/ruinas">Ver ruinas</a>/li>
 
+            <li> <a href="/about">Sobre Nosotros</a></li>
+            <li>  <a href="/ultimo">Último</a></li>
+            <li><a href="mailto:emilhm@gmx.at">Contacto</a></li>
 
         </ul>
 
     </div>
-</div>
+</nav>
