@@ -1,5 +1,6 @@
 ---
-# sample output for combining countries.yml with your data file
+layout: none
+permalink: /ruinas.geojson
 ---
 
 {
