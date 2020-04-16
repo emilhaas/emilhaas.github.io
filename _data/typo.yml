@@ -1,11 +1,11 @@
-- name: Casa
-  code: ca
+- code: ca
+  name: Casa
 
-- name: Cabana de braña
-  code: cb
+- code: cb
+  name: Cabana de braña
 
-- name: Casona
-  code: cc
+- code: cc
+  name: Casona
 
-- name: Casa de indianos
-  code: ci
+- code: ci
+  name: Casa de indianos
