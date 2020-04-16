@@ -22,10 +22,10 @@ permalink:  /ruinas/
                 </ul>
               </li>
               <li class="uk-parent">
-                <a href="#">Pueblos <span uk-icon="icon:  triangle-down"></span></a>
+                <a href="#">Typo <span uk-icon="icon:  triangle-down"></span></a>
                 <ul class="uk-nav-sub">
-                  {% for item in site.data.places %}
-                  <li uk-filter-control="filter: [data-places='{{ item.code }}']; group: places"><a href="#">{{ item.name }}</a></li>
+                  {% for item in site.data.typo %}
+                  <li uk-filter-control="filter: [data-typo='{{ item.code }}']; group: typo"><a href="#">{{ item.name }}</a></li>
                   {% endfor %}
                 </ul>
               </li>
