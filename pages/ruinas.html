@@ -13,9 +13,37 @@ permalink:  /ruinas/
   <div class="uk-container">
 
 
+    <div class="uk-child-width-1-4@m uk-grid uk-grid-stack" uk-grid="">
+      {% for ruinas in site.data.ruinas %}
+<div>
 
 
-<div class="uk-grid-small uk-flex uk-flex-middle" uk-grid>
+                    <div class="uk-card uk-card-default uk-card-small">
+                        <div class="uk-card-media-top">
+                            <img src="https://getuikit.com/assets/uikit/tests/images/light.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">{{ruinas.name}}</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <p class="uk-text-meta"><a href="#">Link</a> on <time datetime="2016-04-01T19:00">April 01, 2016</time>.</p>
+                        </div>
+                    </div>
+
+                    </div>
+
+                          {% endfor %}
+
+
+            </div>
+
+
+
+
+
+
+<div class="uk-grid-small uk-flex uk-flex-middle uk-hidden" uk-grid>
 
     <div class="uk-width-2-3@m uk-width-1-1">
       <div class="uk grid uk-grid-match uk-child-width-1-2" uk-grid>
