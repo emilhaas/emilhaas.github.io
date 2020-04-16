@@ -36,17 +36,17 @@ permalink:  /ruinas/
 
           <div class="uk-width-expand@m">
 
-
+dateadded
             <ul class="js-filter uk-child-width-1-2 uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
-              {% for ruinas in site.data.ruinas %}
-              <li data-typo="white" data-places="large" data-date="2016-06-01">
+              {% for ruinas in site.data.ruinas_neu %}
+              <li data-typo="{{ruinas.type}}" data-places="{{ruinas.place}}" data-date="{{ruinas.dateadded}}">
                 <div class="uk-card uk-card-default uk-card-small">
                     <div class="uk-card-media-top">
                         <img src="https://getuikit.com/assets/uikit/tests/images/light.jpg" alt="">
                     </div>
                     <div class="uk-card-body">
                         <h3 class="uk-card-title">{{ruinas.name}}</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        <p>{{ruinas.description}}</p>
                     </div>
                     <div class="uk-card-footer">
                         <p class="uk-text-meta"><a class="uk-button uk-button-default" href="#modal{{ forloop.index }}
@@ -77,7 +77,10 @@ permalink:  /ruinas/
 
 
 
-            {% for ruinas in site.data.ruinas %}
+            {% for ruinas in site.data.ruinas_neu %}
+
+            {% assign place = site.data.places[ruinas.place] %}
+
 
             <div id="modal{{ forloop.index }}" class="uk-modal-full" uk-modal>
       <div class="uk-modal-dialog">
@@ -88,12 +91,11 @@ permalink:  /ruinas/
                   <h1>{{ruinas.name}}</h1>
 
                   <div uk-lightbox>
-                      <span uk-icon="icon: location; ratio: 1"></span> City, Spain, <a  href="https://www.google.com/maps/?ll={{ruinas.lat}},{{ruinas.long}}&z=12&t=m&hl=en-GB&gl=US&mapclient=embed" data-caption="{{ruinas.name}}" data-type="iframe">View on Maps</a>
-
+                      <span uk-icon="icon: location; ratio: 1"></span> {{place.name}}, Spain, <a  href="https://www.google.com/maps/?ll={{ruinas.lat}},{{ruinas.long}}&z=12&t=m&hl=en-GB&gl=US&mapclient=embed" data-caption="{{ruinas.name}}" data-type="iframe">View on Maps</a>
 
 
 </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>{{ruinas.description}}</p>
 
 
 
