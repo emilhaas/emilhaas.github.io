@@ -28,8 +28,8 @@ permalink:  /ruinas/
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                         </div>
                         <div class="uk-card-footer">
-                            <p class="uk-text-meta"><a class="uk-button uk-button-default" href="#modal-full" uk-toggle>Ver</a>
- on <time datetime="2016-04-01T19:00">April 01, 2016</time></p>
+                            <p class="uk-text-meta"><a class="uk-button uk-button-default" href="#modal-{{ruinas.name}}" uk-toggle>Ver</a>
+</p>
                         </div>
                     </div>
 
@@ -42,16 +42,20 @@ permalink:  /ruinas/
             </div>
             </div>
 
+            {% for ruinas in site.data.ruinas %}
 
-            <div id="modal-full" class="uk-modal-full" uk-modal>
+            <div id="modal-{{ruinas.name}}" class="uk-modal-full" uk-modal>
       <div class="uk-modal-dialog">
           <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
           <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
               <div class="uk-background-cover" style="background-image: url('https://getuikit.com/assets/uikit/tests/images/light.jpg');" uk-height-viewport></div>
               <div class="uk-padding-large">
-                  <h1>Headline</h1>
+                  <h1>{{ruinas.name}}</h1>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <time datetime="2016-04-01T19:00">April 01, 2016</time>
               </div>
           </div>
       </div>
   </div>
+
+  {% endfor %}
