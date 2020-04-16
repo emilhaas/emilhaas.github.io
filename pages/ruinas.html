@@ -77,7 +77,7 @@ permalink:  /ruinas/
 
             {% for ruinas in site.data.ruinas_neu %}
 
-            {% assign place = site.data.place | where: code, ruinas.place %}
+            {% assign place = site.data.place | where: place.code, ruinas.place %}
 
 
 
