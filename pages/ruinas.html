@@ -31,7 +31,7 @@ permalink:  /ruinas/
             </div>
             <div>
                 <ul class="uk-subnav uk-subnav-pill" uk-margin>
-                  {% for item in site.data.typologie %}
+                  {% for item in site.data.typo %}
                     <li uk-filter-control="filter: [data-typo='{{ item.code }}']; group: typo"><a href="#">{{ item.name }}</a></li>
                     {% endfor %}
                 </ul>
