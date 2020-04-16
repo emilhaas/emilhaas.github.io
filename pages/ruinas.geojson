@@ -3,39 +3,27 @@ layout: none
 permalink: /ruinas.geojson
 ---
 
-{
-    "type": "FeatureCollection",
-    "features": [
 
+{
+  "type": "FeatureCollection",
+  "features": [
 
       {% for ruina in site.data.ruinas %}
-        {
+      {
 
-          "geometry": {
-              "type": "Point",
-              "coordinates": [
-                  {{ ruina.lat }},
-                  {{ ruina.long }}
-              ]
-          },
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [{{ ruina.lat }},{{ ruina.long }}]
+        },
+        "properties": {
+          "name": "{{ ruina.name }}",
+        }
 
-
-          "type": "Feature",
-          "properties": {
-              "description": "{{ ruina.name }}",
-              "marker-symbol": "{{ ruina.name }}",
-              "title": "{{ ruina.name }}",
-              "url": "{{ ruina.name }}",
-              "lines": [
-                  "{{ ruina.name }}"
-              ],
-              "address": "1{{ ruina.name }}"
-          }
+      } {% if forloop.last %}{% else %},{% endif %}
+  {% endfor %}
 
 
-            } {% if forloop.last %}{% else %},{% endif %}
-        {% endfor %}
 
-
-    ]
+  ]
 }
