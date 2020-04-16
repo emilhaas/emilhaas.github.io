@@ -14,7 +14,7 @@ permalink:  /ruinas/
             <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
               <li class="uk-active" uk-filter-control><a href="#">All</a></li>
               <li class="uk-parent">
-                <a href="#">Pueblos <span uk-icon="icon:  triangle-down"></span></a>
+                <a href="#">Pueblos</a>
                 <ul class="uk-nav-sub">
                   {% for item in site.data.places %}
                   <li uk-filter-control="filter: [data-places='{{ item.code }}']; group: places"><a href="#">{{ item.name }}</a></li>
@@ -22,7 +22,7 @@ permalink:  /ruinas/
                 </ul>
               </li>
               <li class="uk-parent">
-                <a href="#">Typo <span uk-icon="icon:  triangle-down"></span></a>
+                <a href="#">Typo </a>
                 <ul class="uk-nav-sub">
                   {% for item in site.data.typo %}
                   <li uk-filter-control="filter: [data-typo='{{ item.code }}']; group: typo"><a href="#">{{ item.name }}</a></li>
@@ -79,7 +79,7 @@ permalink:  /ruinas/
 
             {% assign place = site.data.place | where: code, ruinas.place %}
 
-          
+
 
 
 
