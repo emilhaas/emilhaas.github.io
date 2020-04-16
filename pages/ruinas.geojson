@@ -10,7 +10,7 @@ permalink: /ruinas.geojson
         "type": "Feature",
         "geometry": {
           "type": "Point",
-          "coordinates": [{{ ruina.lat }}, {{ruina.long}}]
+          "coordinates": [{{ ruina.long }}, {{ruina.lat}}]
         },
         "properties": {
           "name": "{{ ruina.name }}",
