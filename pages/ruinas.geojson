@@ -5,7 +5,7 @@ permalink: /ruinas.geojson
 {
   "type": "FeatureCollection",
   "features": [
-      {% for ruina in site.data.ruinas%}
+      {% for ruina in site.data.ruinas_neu%}
       {% if ruina.type ==  ca %}
 
       {% assign color = "#ffffff" %}
