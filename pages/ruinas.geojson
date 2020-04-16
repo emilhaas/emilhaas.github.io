@@ -42,7 +42,7 @@ permalink: /ruinas.geojson
         "properties": {
           "title": "{{ ruina.name }}",
           "description": "{{ ruina.description }}",
-          "marker-color": "{{ color }}",
+          "marker-color": "{{ color }}"
         }
 
       } {% if forloop.last %}{% else %},{% endif %}
