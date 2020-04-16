@@ -24,9 +24,17 @@ permalink:  /ruinas/
             </div>
             <div>
                 <ul class="uk-subnav uk-subnav-pill" uk-margin>
-                  {% for item in site.data.places %}
-                    <li uk-filter-control="filter: [data-places='{{ item.code }}']; group: places"><a href="#">{{ item.name }}</a></li>
-                    {% endfor %}
+                  <li>
+                    <a href="#">Pueblos <span uk-icon="icon:  triangle-down"></span></a>
+                    <div uk-dropdown="mode: click;">
+                      <ul class="uk-nav uk-dropdown-nav">
+                        {% for item in site.data.places %}
+                        <li uk-filter-control="filter: [data-places='{{ item.code }}']; group: places"><a href="#">{{ item.name }}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </li>
+
                 </ul>
             </div>
             <div>
