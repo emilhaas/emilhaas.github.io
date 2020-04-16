@@ -28,7 +28,8 @@ permalink:  /ruinas/
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                         </div>
                         <div class="uk-card-footer">
-                            <p class="uk-text-meta"><a class="uk-button uk-button-default" href="#modal-{{ruinas.name}}" uk-toggle>Ver</a>
+                            <p class="uk-text-meta"><a class="uk-button uk-button-default" href="#modal{{ forloop.index }}
+" uk-toggle>Ver</a>
 </p>
                         </div>
                     </div>
@@ -44,7 +45,7 @@ permalink:  /ruinas/
 
             {% for ruinas in site.data.ruinas %}
 
-            <div id="modal-{{ruinas.name}}" class="uk-modal-full" uk-modal>
+            <div id="modal{{ forloop.index }}" class="uk-modal-full" uk-modal>
       <div class="uk-modal-dialog">
           <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
           <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
