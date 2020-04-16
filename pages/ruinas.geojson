@@ -2,22 +2,19 @@
 layout: none
 permalink: /ruinas.geojson
 ---
-
-
 {
   "type": "FeatureCollection",
   "features": [
-
       {% for ruina in site.data.ruinas %}
       {
-
         "type": "Feature",
         "geometry": {
           "type": "Point",
-          "coordinates": [{{ ruina.lat }},{{ ruina.long }}]
+          "coordinates": [{{ ruina.lat }}, {{ruina.long}}]
         },
         "properties": {
           "name": "{{ ruina.name }}",
+     		"gender": "Male"
         }
 
       } {% if forloop.last %}{% else %},{% endif %}
