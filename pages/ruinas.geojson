@@ -6,25 +6,27 @@ permalink: /ruinas.geojson
   "type": "FeatureCollection",
   "features": [
       {% for ruina in site.data.ruinas_neu  %}
-      {% if ruina.type ==  ca %}
+      {% assign color = "#333333" %}
+
+      {% if ruina.type ==  "ca" %}
 
       {% assign color = "#ffffff" %}
 
       {% endif %}
 
-      {% if ruina.type ==  cb %}
+      {% if ruina.type ==  "cb" %}
 
       {% assign color = "#c90000" %}
 
       {% endif %}
 
-      {% if ruina.type ==  cc %}
+      {% if ruina.type ==  "cc" %}
 
       {% assign color = "#fff400" %}
 
       {% endif %}
 
-      {% if ruina.type ==  ci %}
+      {% if ruina.type ==  "ci" %}
 
       {% assign color = "#0004ff" %}
 
