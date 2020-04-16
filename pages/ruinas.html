@@ -77,7 +77,6 @@ permalink:  /ruinas/
 
             {% for ruinas in site.data.ruinas_neu %}
 
-            {% assign place = site.data.place | where: place.code, ruinas.place %}
 
 
 
@@ -97,7 +96,7 @@ permalink:  /ruinas/
                   <h1>{{ruinas.name}}</h1>
 
                   <div uk-lightbox>
-                      <span uk-icon="icon: location; ratio: 1"></span> {{place.name}}, Spain, <a  href="https://www.google.com/maps/?ll={{ruinas.lat}},{{ruinas.long}}&z=12&t=m&hl=en-GB&gl=US&mapclient=embed" data-caption="{{ruinas.name}}" data-type="iframe">View on Maps</a>
+                      <span uk-icon="icon: location; ratio: 1"></span> Asturias, Spain, <a  href="https://www.google.com/maps/?ll={{ruinas.lat}},{{ruinas.long}}&z=12&t=m&hl=en-GB&gl=US&mapclient=embed" data-caption="{{ruinas.name}}" data-type="iframe">View on Maps</a>
 
 
 </div>
