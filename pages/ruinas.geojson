@@ -41,7 +41,7 @@ permalink: /ruinas.geojson
         },
         "properties": {
           "title": "{{ ruina.name }}",
-          "description": "{{ ruina.description }}",
+          "description": "{{ ruina.desc1 }}",
           "marker-color": "{{ color }}"
         }
 
