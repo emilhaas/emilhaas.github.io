@@ -1,20 +1,20 @@
-- name: Silvamayor
-  code: si
+- code: si
+  name: Silvamayor
 
-- name: Cadavedo
-  code: ca
+- code: ca
+  name: Cadavedo
 
-- name: Villademoros
-  code: vi
+- code: vi
+  name: Villademoros
 
-- name: Almuña
-  code: al
+- code: al
+  name: Almuña
 
-- name: Villar de luarca
-  code: vl
+- code: vl
+  name: Villar de luarca
 
-- name: Las murias
-  code: mu
+- code: mu
+  name: Las Murias
 
-- name: Bustiello de ayones
-  code: bu
+- code: bu
+  name: Bustiello de ayones

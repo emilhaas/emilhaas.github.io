@@ -5,7 +5,34 @@ permalink: /ruinas.geojson
 {
   "type": "FeatureCollection",
   "features": [
-      {% for ruina in site.data.ruinas %}
+      {% for ruina in site.data.ruinas_neu  %}
+      {% assign color = "#333333" %}
+
+      {% if ruina.type ==  "ca" %}
+
+      {% assign color = "#ffffff" %}
+
+      {% endif %}
+
+      {% if ruina.type ==  "cb" %}
+
+      {% assign color = "#c90000" %}
+
+      {% endif %}
+
+      {% if ruina.type ==  "cc" %}
+
+      {% assign color = "#fff400" %}
+
+      {% endif %}
+
+      {% if ruina.type ==  "ci" %}
+
+      {% assign color = "#0004ff" %}
+
+      {% endif %}
+
+
       {
         "type": "Feature",
         "geometry": {
@@ -13,7 +40,9 @@ permalink: /ruinas.geojson
           "coordinates": [{{ ruina.long }}, {{ruina.lat}}]
         },
         "properties": {
-          "name": "{{ ruina.name }}"
+          "title": "{{ ruina.name }}",
+          "description": "{{ ruina.description }}",
+          "marker-color": "{{ color }}"
         }
 
       } {% if forloop.last %}{% else %},{% endif %}
