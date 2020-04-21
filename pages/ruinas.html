@@ -93,63 +93,19 @@ permalink:  /ruinas/
                   <h1>{{ruinas.name}}</h1>
 
                   <div uk-lightbox>
-                      <span uk-icon="icon: location; ratio: 1"></span> Asturias, Spain, <a  href="https://www.google.com/maps/?ll={{ruinas.lat}},{{ruinas.long}}&z=12&t=m&hl=en-GB&gl=US&mapclient=embed" data-caption="{{ruinas.name}}" data-type="iframe">View on Maps</a>
+                      <span uk-icon="icon: location; ratio: 1"></span> Asturias, Spain, <a  href="http://geojson.io/#data=data:application/json,{% include ruinas.geojson %}
+" data-caption="{{ruinas.name}}" data-type="iframe">View on Maps</a>
 
 
 </div>
 <p>{{ruinas.desc1}}</p>
 <p>{{ruinas.desc2}}</p>
 
-<pre>
-
-  {
-    "type": "FeatureCollection",
-    "features": [
-        {% assign color = "#333333" %}
-
-        {% if ruina.type ==  "ca" %}
-
-        {% assign color = "#ffffff" %}
-
-        {% endif %}
-
-        {% if ruina.type ==  "cb" %}
-
-        {% assign color = "#c90000" %}
-
-        {% endif %}
-
-        {% if ruina.type ==  "cc" %}
-
-        {% assign color = "#fff400" %}
-
-        {% endif %}
-
-        {% if ruina.type ==  "ci" %}
-
-        {% assign color = "#0004ff" %}
-
-        {% endif %}
 
 
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [{{ ruinas.long }}, {{ruinas.lat}}]
-          },
-          "properties": {
-            "title": "{{ ruinas.name }}",
-            "description": "{{ ruinas.desc1 }}",
-            "marker-color": "{{ color }}"
-          }
-
-        }
+<pre
 
 
-
-    ]
-  }
 
 </pre>
 

@@ -1,36 +1,48 @@
 {
-    "type": "FeatureCollection",
-    "features": [
+  "type": "FeatureCollection",
+  "features": [
+      {% assign color = "#333333" %}
+
+      {% if ruina.type ==  "ca" %}
+
+      {% assign color = "#ffffff" %}
+
+      {% endif %}
+
+      {% if ruina.type ==  "cb" %}
+
+      {% assign color = "#c90000" %}
+
+      {% endif %}
+
+      {% if ruina.type ==  "cc" %}
+
+      {% assign color = "#fff400" %}
+
+      {% endif %}
+
+      {% if ruina.type ==  "ci" %}
+
+      {% assign color = "#0004ff" %}
+
+      {% endif %}
 
 
-      {% for ruina in site.data.ruinas %}
-        {
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [{{ ruinas.long }}, {{ruinas.lat}}]
+        },
+        "properties": {
+          "title": "{{ ruinas.name }}",
+          "description": "{{ ruinas.desc1 }}",
+          "marker-color": "{{ color }}"
+        }
 
-          "geometry": {
-              "type": "Point",
-              "coordinates": [
-                  {{ ruina.lat }},
-                  {{ ruina.long }}
-              ]
-          },
-
-
-          "type": "Feature",
-          "properties": {
-              "description": "{{ ruina.name }}",
-              "marker-symbol": "{{ ruina.name }}",
-              "title": "{{ ruina.name }}",
-              "url": "{{ ruina.name }}",
-              "lines": [
-                  "{{ ruina.name }}"
-              ],
-              "address": "1{{ ruina.name }}"
-          }
+      }
 
 
-            } {% if forloop.last %}{% else %},{% endif %}
-        {% endfor %}
 
-
-    ]
+  ]
 }
