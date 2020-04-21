@@ -98,8 +98,8 @@ permalink:  /ruinas/
                       {% if item.code == ruinas.place %}
                       {{ item.name }}
                       {% endif %}
-                      {% endfor %}, Spain, <a target="_blank" href="http://geojson.io/#data=data:application/json,
- {% include ruinas.geojson | uri_escape %}" data-caption="{{ruinas.name}}">View on Maps</a>
+                      {% endfor %}, Spain, <a target="_blank" href="http://geojson.io/#data=data:application/json,{% include ruinas.geojson %}
+" data-caption="{{ruinas.name}}">View on Maps</a>
 
 
 
