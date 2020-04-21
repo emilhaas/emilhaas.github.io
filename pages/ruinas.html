@@ -76,8 +76,9 @@ permalink:  /ruinas/
             <script>
   var obj = {% include ruinas.geojson %};
   var myJSON = JSON.stringify(obj);
-  var a = document.getElementById('link-{{ forloop.index }}'); //or grab it by tagname etc
-a.href = "http://geojson.io/#data=data:application/json,".myJSON;
+  var a = document.getElementById('link-{{ forloop.index }}');
+  document.getElementById('link-{{ forloop.index }}').href = '"http://geojson.io/#data=data:application/json,' + myJSON + '"';
+
   </script>
 
 
@@ -105,8 +106,8 @@ a.href = "http://geojson.io/#data=data:application/json,".myJSON;
                       {% if item.code == ruinas.place %}
                       {{ item.name }}
                       {% endif %}
-                      {% endfor %}, Spain, <a id="link-{{ forloop.index }} "target="_blank" href="http://geojson.io/#data=data:application/json,{{}}
-" data-caption="{{ruinas.name}}">View on Maps</a>
+                      {% endfor %}, Spain, <a id="link-{{ forloop.index }}" target="_blank" href=""
+data-caption="{{ruinas.name}}">View on Maps</a>
 
 
 
