@@ -93,7 +93,12 @@ permalink:  /ruinas/
                   <h1>{{ruinas.name}}</h1>
 
 
-                      <span uk-icon="icon: location; ratio: 1"></span> Asturias, Spain, <a target="_blank" href="http://geojson.io/#data=data:application/json,{% include ruinas.geojson %}
+                      <span uk-icon="icon: location; ratio: 1"></span>
+                      {% for item in site.data.places %}
+                      {% if item.code == ruinas.place %}
+                      {{ item.name }}
+                      {% endif %}
+                      {% endfor %}, Spain, <a target="_blank" href="http://geojson.io/#data=data:application/json,{% include ruinas.geojson %}
 " data-caption="{{ruinas.name}}">View on Maps</a>
 
 
