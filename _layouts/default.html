@@ -7,9 +7,10 @@ layout: compress
       {% include header.html %}
     </head>
     <body>
-      <div class="uk-offcanvas-content uk-section-default">
+      <div class="uk-offcanvas-content">
       {% include navigation.html %}
       {{ content }}
+      {% include footer.html %}
       </div>
       {% include scripts.ext %}
     </body>
