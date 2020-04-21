@@ -81,26 +81,6 @@ permalink:  /ruinas/
 
 
 
-                        {% assign geojson =
-                          {
-                            "type": "FeatureCollection",
-                            "features": [
-                                {
-                                  "type": "Feature",
-                                  "geometry": {
-                                    "type": "Point",
-                                    "coordinates": [{{ ruinas.long }}, {{ruinas.lat}}]
-                                  },
-                                  "properties": {
-                                    "title": "{{ ruinas.name }}",
-                                    "description": "{{ ruinas.desc1 }}"
-                                  }
-                                }
-                            ]
-                          }
-
-                        %}
-
 
 
 
@@ -120,7 +100,23 @@ permalink:  /ruinas/
                       {% if item.code == ruinas.place %}
                       {{ item.name }}
                       {% endif %}
-                      {% endfor %}, Spain, {% include ruinas.geojson %}
+                      {% endfor %}, Spain, <a target="_blank" href="http://geojson.io/#data=data:application/json,{
+                        "type": "FeatureCollection",
+                        "features": [
+                            {
+                              "type": "Feature",
+                              "geometry": {
+                                "type": "Point",
+                                "coordinates": [{{ ruinas.long }}, {{ruinas.lat}}]
+                              },
+                              "properties": {
+                                "title": "{{ ruinas.name }}",
+                                "description": "{{ ruinas.desc1 }}"
+                              }
+                            }
+                        ]
+                      }
+" data-caption="{{ruinas.name}}">View on Maps</a>
 
 
 
