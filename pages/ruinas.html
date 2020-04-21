@@ -81,6 +81,29 @@ permalink:  /ruinas/
 
 
 
+                        {% assign geojson =
+                          {
+                            "type": "FeatureCollection",
+                            "features": [
+                                {
+                                  "type": "Feature",
+                                  "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [{{ ruinas.long }}, {{ruinas.lat}}]
+                                  },
+                                  "properties": {
+                                    "title": "{{ ruinas.name }}",
+                                    "description": "{{ ruinas.desc1 }}"
+                                  }
+                                }
+                            ]
+                          }
+
+                        %}
+
+
+
+
 
             <div id="modal{{ forloop.index }}" class="uk-modal-full" uk-modal>
       <div class="uk-modal-dialog">
@@ -97,7 +120,8 @@ permalink:  /ruinas/
                       {% if item.code == ruinas.place %}
                       {{ item.name }}
                       {% endif %}
-                      {% endfor %}, Spain, <a target="_blank" href="http://geojson.io/#data=data:application/json,{% include ruinas.geojson %}
+                      {% endfor %}, Spain, <a target="_blank" href="http://geojson.io/#data=data:application/json,{{geojson | jsonify}}
+
 
 " data-caption="{{ruinas.name}}">View on Maps</a>
 
@@ -105,15 +129,6 @@ permalink:  /ruinas/
 
 <p>{{ruinas.desc1}}</p>
 <p>{{ruinas.desc2}}</p>
-
-
-
-<pre>
-
-</pre>
-
-
-
 
 
 
