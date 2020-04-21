@@ -73,7 +73,12 @@ permalink:  /ruinas/
 
             {% for ruinas in site.data.ruinas_neu %}
 
-
+            <script>
+  var obj = {% include ruinas.geojson %};
+  var myJSON = JSON.stringify(obj);
+  var a = document.getElementById('link-{{ forloop.index }}'); //or grab it by tagname etc
+a.href = "http://geojson.io/#data=data:application/json,".myJSON;
+  </script>
 
 
 
@@ -100,22 +105,7 @@ permalink:  /ruinas/
                       {% if item.code == ruinas.place %}
                       {{ item.name }}
                       {% endif %}
-                      {% endfor %}, Spain, <a target="_blank" href="http://geojson.io/#data=data:application/json,{
-                        "type": "FeatureCollection",
-                        "features": [
-                            {
-                              "type": "Feature",
-                              "geometry": {
-                                "type": "Point",
-                                "coordinates": [{{ ruinas.long }}, {{ruinas.lat}}]
-                              },
-                              "properties": {
-                                "title": "{{ ruinas.name }}",
-                                "description": "{{ ruinas.desc1 }}"
-                              }
-                            }
-                        ]
-                      }
+                      {% endfor %}, Spain, <a id="link-{{ forloop.index }} "target="_blank" href="http://geojson.io/#data=data:application/json,{{}}
 " data-caption="{{ruinas.name}}">View on Maps</a>
 
 
