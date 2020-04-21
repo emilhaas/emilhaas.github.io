@@ -90,7 +90,6 @@ permalink:  /ruinas/
               <div class="uk-padding-large">
                   <h1>{{ruinas.name}}</h1>
 
-                  {% include ruinas.geojson  | jsonify  %}
 
 
                       <span uk-icon="icon: location; ratio: 1"></span>
@@ -98,7 +97,7 @@ permalink:  /ruinas/
                       {% if item.code == ruinas.place %}
                       {{ item.name }}
                       {% endif %}
-                      {% endfor %}, Spain, <a target="_blank" href="http://geojson.io/#data=data:application/json,
+                      {% endfor %}, Spain, <a target="_blank" href="http://geojson.io/#data=data:application/json,{% include ruinas.geojson %}
 
 " data-caption="{{ruinas.name}}">View on Maps</a>
 
@@ -110,7 +109,7 @@ permalink:  /ruinas/
 
 
 <pre>
-{% include ruinas.geojson %}
+
 </pre>
 
 
