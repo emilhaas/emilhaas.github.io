@@ -1,3 +1,5 @@
+
+<a target="_blank" href="http://geojson.io/#data=data:application/json,
 {
   "type": "FeatureCollection",
   "features": [
@@ -14,3 +16,4 @@
       }
   ]
 }
+" data-caption="{{ruinas.name}}">View on Maps</a>
