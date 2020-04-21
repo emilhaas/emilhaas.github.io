@@ -42,7 +42,7 @@ permalink:  /ruinas/
                     <div class="uk-card-media-top">
                         <img src="/images/{{ruinas.id}}/{{ruinas.id}}_1.jpg" alt="{{ruinas.name}}">
                     </div>
-                
+
                     <div class="uk-card-footer">
                         <p class="uk-text-meta"><a class="uk-button uk-button-default" href="#modal{{ forloop.index }}
 " uk-toggle>Ver</a>
@@ -99,6 +99,59 @@ permalink:  /ruinas/
 </div>
 <p>{{ruinas.desc1}}</p>
 <p>{{ruinas.desc2}}</p>
+
+<p>
+
+  {
+    "type": "FeatureCollection",
+    "features": [
+        {% assign color = "#333333" %}
+
+        {% if ruina.type ==  "ca" %}
+
+        {% assign color = "#ffffff" %}
+
+        {% endif %}
+
+        {% if ruina.type ==  "cb" %}
+
+        {% assign color = "#c90000" %}
+
+        {% endif %}
+
+        {% if ruina.type ==  "cc" %}
+
+        {% assign color = "#fff400" %}
+
+        {% endif %}
+
+        {% if ruina.type ==  "ci" %}
+
+        {% assign color = "#0004ff" %}
+
+        {% endif %}
+
+
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [{{ ruinas.long }}, {{ruinas.lat}}]
+          },
+          "properties": {
+            "title": "{{ ruinas.name }}",
+            "description": "{{ ruinas.desc1 }}",
+            "marker-color": "{{ color }}"
+          }
+
+        }
+
+
+
+    ]
+  }
+
+</p>
 
 
 
