@@ -1,33 +1,6 @@
 {
   "type": "FeatureCollection",
   "features": [
-      {% assign color = "#333333" %}
-
-      {% if ruina.type ==  "ca" %}
-
-      {% assign color = "#ffffff" %}
-
-      {% endif %}
-
-      {% if ruina.type ==  "cb" %}
-
-      {% assign color = "#c90000" %}
-
-      {% endif %}
-
-      {% if ruina.type ==  "cc" %}
-
-      {% assign color = "#fff400" %}
-
-      {% endif %}
-
-      {% if ruina.type ==  "ci" %}
-
-      {% assign color = "#0004ff" %}
-
-      {% endif %}
-
-
       {
         "type": "Feature",
         "geometry": {
@@ -36,13 +9,8 @@
         },
         "properties": {
           "title": "{{ ruinas.name }}",
-          "description": "{{ ruinas.desc1 }}",
-          "marker-color": "{{ color }}"
+          "description": "{{ ruinas.desc1 }}"
         }
-
       }
-
-
-
   ]
 }
