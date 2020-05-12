@@ -13,6 +13,7 @@ permalink:  /ruinas/
           <div class="uk-card uk-card-default uk-card-body">
             <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
               <li class="uk-active" uk-filter-control><a href="#">All</a></li>
+              
               <li class="uk-parent">
                 <a href="#">Pueblos</a>
                 <ul class="uk-nav-sub">
@@ -21,6 +22,7 @@ permalink:  /ruinas/
                   {% endfor %}
                 </ul>
               </li>
+              
               <li class="uk-parent">
                 <a href="#">Typo </a>
                 <ul class="uk-nav-sub">
@@ -28,7 +30,17 @@ permalink:  /ruinas/
                   <li uk-filter-control="filter: [data-typo='{{ item.code }}']; group: typo"><a href="#">{{ item.name }}</a></li>
                   {% endfor %}
                 </ul>
+                
               </li>
+              <li class="uk-parent">
+                <a href="#">Añadido</a>
+                <ul class="uk-nav-sub">
+                  {% for item in site.data.places %}
+                  <li uk-filter-control="filter: [data-dateadded='{{ item.code }}']; group: dateadded"><a href="#">{{ item.name }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+
             </ul>
           </div>
           </div>
