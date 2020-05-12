@@ -1,0 +1,42 @@
+---
+title: "Patrimonio"
+layout: default
+permalink: /about
+---
+
+
+  <div class="uk-section uk-section-muted">
+
+
+  <div class="uk-container">
+<div class="uk-grid-small uk-flex uk-flex-middle" uk-grid>
+
+    <div class="uk-width-2-3@m uk-width-1-1">
+      <div class="uk-child-width-1-1@m">
+
+        <h2>El patrimonio rural construido en Valdés</h2>
+
+
+        <p>My interest for Architecture and specially for old and abandoned buildings of all type motivated me to start with documentation works in my village and the surrounding ones in summer of 2016. Soon i had the idea of starting a blog/website where i could slowly start uploading all the the data, inspired to a large degree by Juan Diez del Corral´s work, and now i finally decided to put it on the cloud.</p>
+        <p>The main idea that i had for this website has always been one of a databasethat shows the scale of a problem that i consider very serious, which is the inmovilism and the lack of interestwith which local institutions and dwellers trat the fast increase in the number of buildings that are left abandoned or in a bad state. There is also a secondary idea that is also approached, which is the amount of buildings that keep getting put up despite this problem, and the lack of respect for architectural traditions and village typologies with which these are often built. In this sense, this proyect also has a more activist side, as it tries to generate a certain awareness in the local population, trying to revert the tendency of the abandonment of old buildings and the erection of new ones, hopefully leading one day to a more sustainable standard in which old building-restauration gains importance, thus diminishing the amount of new buildings getting built</p>
+
+
+
+      </div>
+      </div>
+
+      <div class="uk-width-1-3@m uk-width-1-1">
+        <div class="uk-child-width-1-1 uk-text-right uk-flex uk-flex-middle uk-grid-collapse" uk-grid>
+          <div>
+            
+          </div>
+
+        </div>
+        </div>
+
+          </div>
+
+
+    </div>
+
+  </div>
