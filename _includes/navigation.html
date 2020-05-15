@@ -30,13 +30,7 @@
         <ul class="uk-navbar-nav">
             <li> <a href="/mapa">Mapa</a></li>
             <li class="uk-active"> <a href="/ruinas">Tipología</a></li>
-            <li> <a href="/mapa">Pueblo</a>
-             <ul class="uk-nav-sub">
-                  {% for item in site.data.places %}
-                  <li uk-filter-control="filter: [data-places='{{ item.code }}']; group: places"><a href="#">{{ item.name }}</a></li>
-                  {% endfor %}
-                </ul>
-                </li>
+            <li> <a href="/mapa">Pueblo</a></li>             
             <li> <a href="/about">Fecha Añadido</a></li>
 
 
