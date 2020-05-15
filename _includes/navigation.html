@@ -32,7 +32,31 @@
             <li class="uk-active"> <a href="/ruinas">Tipología</a></li>
             <li> <a href="/mapa">Pueblo</a></li>             
             <li> <a href="/about">Fecha Añadido</a></li>
-
+                <a href="#">Pueblos</a>
+                <ul class="uk-nav-sub">
+                  {% for item in site.data.places %}
+                  <li uk-filter-control="filter: [data-places='{{ item.code }}']; group: places"><a href="#">{{ item.name }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+              
+              <li class="uk-parent">
+                <a href="#">Typo </a>
+                <ul class="uk-nav-sub">
+                  {% for item in site.data.typo %}
+                  <li uk-filter-control="filter: [data-typo='{{ item.code }}']; group: typo"><a href="#">{{ item.name }}</a></li>
+                  {% endfor %}
+                </ul>
+                
+              </li>
+              <li class="uk-parent">
+                <a href="#">Añadido</a>
+                <ul class="uk-nav-sub">
+                  {% for item in site.data.dateadded %}
+                  <li uk-filter-control="filter: [data-dateadded='{{ item.code }}']; group: dateadded"><a href="#">{{ item.name }}</a></li>
+                  {% endfor %}
+                </ul>
+           
 
         </ul>
 
