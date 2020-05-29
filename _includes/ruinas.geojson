@@ -10,6 +10,7 @@
         "properties": {
           "title": "{{ ruinas.name }}",
           "description": "{{ ruinas.desc1 }}"
+          "description2": "{{ ruinas.desc2 }}"
         }
       }
   ]
