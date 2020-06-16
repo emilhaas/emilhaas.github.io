@@ -50,7 +50,7 @@ permalink:  /ruinas
 
           <div class="uk-width-expand@m">
 
-            <ul class="js-filter uk-child-width-1-2 uk-child-width-1-4@m uk-text-center">
+            <ul class="js-filter uk-child-width-1-2 uk-child-width-1-4@m uk-text-center" uk-grid>
               {% for ruinas in site.data.ruinas_neu_2 %}
               <li data-typo="{{ruinas.type}}" data-places="{{ruinas.place}}" data-date="{{ruinas.dateadded}}">
                 <a   class="uk-card uk-card-default uk-card-small" href="#modal{{ forloop.index }}
