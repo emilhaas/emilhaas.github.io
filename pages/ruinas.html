@@ -35,9 +35,8 @@ permalink:  /ruinas
               <li class="uk-parent">
                 <a href="#">Añadido</a>
                 <ul class="uk-nav-sub">
-                  {% for item in site.data.dateadded %}
-                  <li uk-filter-control="filter: [data-dateadded='{{ item.code }}']; group: dateadded"><a href="#">{{ item.name }}</a></li>
-                  {% endfor %}
+                   <li uk-filter-control="sort: data-date"><a href="#">Ascending</a></li>
+                   <li uk-filter-control="sort: data-date; order: desc"><a href="#">Descending</a></li>
                 </ul>
               </li>
 
