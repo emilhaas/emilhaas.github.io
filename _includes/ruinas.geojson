@@ -1,36 +1,17 @@
 {
-    "type": "FeatureCollection",
-    "features": [
-
-
-      {% for ruina in site.data.ruinas %}
-        {
-
-          "geometry": {
-              "type": "Point",
-              "coordinates": [
-                  {{ ruina.lat }},
-                  {{ ruina.long }}
-              ]
-          },
-
-
-          "type": "Feature",
-          "properties": {
-              "description": "{{ ruina.name }}",
-              "marker-symbol": "{{ ruina.name }}",
-              "title": "{{ ruina.name }}",
-              "url": "{{ ruina.name }}",
-              "lines": [
-                  "{{ ruina.name }}"
-              ],
-              "address": "1{{ ruina.name }}"
-          }
-
-
-            } {% if forloop.last %}{% else %},{% endif %}
-        {% endfor %}
-
-
-    ]
+  "type": "FeatureCollection",
+  "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [{{ ruinas.long }}, {{ruinas.lat}}]
+        },
+        "properties": {
+          "title": "{{ ruinas.name }}",
+          "description": "{{ ruinas.desc1 }}"
+          "description2": "{{ ruinas.desc2 }}"
+        }
+      }
+  ]
 }

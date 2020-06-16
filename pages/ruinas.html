@@ -1,18 +1,19 @@
 ---
 layout: default
-permalink:  /ruinas/
+permalink:  /ruinas
 ---
 
 
-  <div class="uk-section uk-section-muted">
+  <div class="uk-section uk-section-small uk-section-muted">
 
-    <div class="uk-container">
+    <div class="uk-container-expand uk-padding-small">
       <div uk-filter="target: .js-filter">
         <div class="uk-grid-small" uk-grid>
-          <div class="uk-width-1-5@m">
+          <div class="uk-width-1-5@m uk-width-1-1">
           <div class="uk-card uk-card-default uk-card-body">
             <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
               <li class="uk-active" uk-filter-control><a href="#">All</a></li>
+              
               <li class="uk-parent">
                 <a href="#">Pueblos</a>
                 <ul class="uk-nav-sub">
@@ -21,6 +22,7 @@ permalink:  /ruinas/
                   {% endfor %}
                 </ul>
               </li>
+              
               <li class="uk-parent">
                 <a href="#">Typo </a>
                 <ul class="uk-nav-sub">
@@ -28,7 +30,16 @@ permalink:  /ruinas/
                   <li uk-filter-control="filter: [data-typo='{{ item.code }}']; group: typo"><a href="#">{{ item.name }}</a></li>
                   {% endfor %}
                 </ul>
+                
               </li>
+              <li class="uk-parent">
+                <a href="#">Añadido</a>
+                <ul class="uk-nav-sub">
+                   <li uk-filter-control="sort: data-date"><a href="#">Ascending</a></li>
+                   <li uk-filter-control="sort: data-date; order: desc"><a href="#">Descending</a></li>
+                </ul>
+              </li>
+
             </ul>
           </div>
           </div>
@@ -36,22 +47,18 @@ permalink:  /ruinas/
           <div class="uk-width-expand@m">
 
             <ul class="js-filter uk-child-width-1-2 uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
-              {% for ruinas in site.data.ruinas_neu %}
+              {% for ruinas in site.data.ruinas_neu_2 %}
               <li data-typo="{{ruinas.type}}" data-places="{{ruinas.place}}" data-date="{{ruinas.dateadded}}">
-                <div class="uk-card uk-card-default uk-card-small">
+                <a   class="uk-card uk-card-default uk-card-small" href="#modal{{ forloop.index }}
+" uk-toggle>
                     <div class="uk-card-media-top">
-                        <img src="/images/{{ruinas.id}}/{{ruinas.id}}_1.JPG" alt="{{ruinas.name}}">
+                      <img data-src="/images/{{ruinas.aaid}}/{{ruinas.aaid}}_1.jpg" data-width="" data-height="" alt="" uk-img  alt="{{ruinas.name}}">
+
+                        <img >
                     </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">{{ruinas.name}}</h3>
-                        <p>{{ruinas.description}}</p>
-                    </div>
-                    <div class="uk-card-footer">
-                        <p class="uk-text-meta"><a class="uk-button uk-button-default" href="#modal{{ forloop.index }}
-" uk-toggle>Ver</a>
-</p>
-                    </div>
-                </div>
+
+
+                </a>
                 </li>
               {% endfor %}
 
@@ -75,7 +82,15 @@ permalink:  /ruinas/
 
 
 
-            {% for ruinas in site.data.ruinas_neu %}
+            {% for ruinas in site.data.ruinas_neu_2 %}
+
+            <script>
+  var obj = {% include ruinas.geojson %};
+  var myJSON = JSON.stringify(obj);
+  var a = document.getElementById('link-{{ forloop.index }}');
+  document.getElementById('link-{{ forloop.index }}').href = '"http://geojson.io/#data=data:application/json,' + myJSON + '"';
+
+  </script>
 
 
 
@@ -91,16 +106,24 @@ permalink:  /ruinas/
       <div class="uk-modal-dialog">
           <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
           <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
-              <div class="uk-background-cover" style="background-image: url('/images/{{ruinas.id}}/{{ruinas.id}}_1.JPG');" uk-height-viewport></div>
+              <div class="uk-background-cover" style="background-image: url('/images/{{ruinas.aaid}}/{{ruinas.aaid}}_1.jpg');" uk-height-viewport></div>
               <div class="uk-padding-large">
                   <h1>{{ruinas.name}}</h1>
 
-                  <div uk-lightbox>
-                      <span uk-icon="icon: location; ratio: 1"></span> Asturias, Spain, <a  href="https://www.google.com/maps/?ll={{ruinas.lat}},{{ruinas.long}}&z=12&t=m&hl=en-GB&gl=US&mapclient=embed" data-caption="{{ruinas.name}}" data-type="iframe">View on Maps</a>
 
 
-</div>
-                  <p>{{ruinas.description}}</p>
+                      <span uk-icon="icon: location; ratio: 1"></span>
+                      {% for item in site.data.places %}
+                      {% if item.code == ruinas.place %}
+                      {{ item.name }}
+                      {% endif %}
+                      {% endfor %}, Spain, <a id="link-{{ forloop.index }}" target="_blank" href="" data-caption="{{ruinas.name}}">View on Maps</a>
+
+
+
+<p>{{ruinas.desc1}}</p>
+<p>{{ruinas.desc2}}</p>
+
 
 
 

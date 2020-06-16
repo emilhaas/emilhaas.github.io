@@ -5,7 +5,7 @@ permalink: /ruinas.geojson
 {
   "type": "FeatureCollection",
   "features": [
-      {% for ruina in site.data.ruinas_neu  %}
+      {% for ruina in site.data.ruinas_neu_2  %}
       {% assign color = "#333333" %}
 
       {% if ruina.type ==  "ca" %}
@@ -41,7 +41,7 @@ permalink: /ruinas.geojson
         },
         "properties": {
           "title": "{{ ruina.name }}",
-          "description": "{{ ruina.description }}",
+          "description": "{{ ruina.desc1 }}",
           "marker-color": "{{ color }}"
         }
 
