@@ -52,7 +52,7 @@ permalink:  /ruinas
                 <a   class="uk-card uk-card-default uk-card-small" href="#modal{{ forloop.index }}
 " uk-toggle>
                     <div class="uk-card-media-top">
-                      <img data-src="/images/{{ruinas.id}}/{{ruinas.id}}_1.jpg" data-width="" data-height="" alt="" uk-img  alt="{{ruinas.name}}">
+                      <img data-src="/images/{{ruinas.aaid}}/{{ruinas.aaid}}_1.jpg" data-width="" data-height="" alt="" uk-img  alt="{{ruinas.name}}">
 
                         <img >
                     </div>
@@ -106,7 +106,7 @@ permalink:  /ruinas
       <div class="uk-modal-dialog">
           <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
           <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
-              <div class="uk-background-cover" style="background-image: url('/images/{{ruinas.id}}/{{ruinas.id}}_1.jpg');" uk-height-viewport></div>
+              <div class="uk-background-cover" style="background-image: url('/images/{{ruinas.aaid}}/{{ruinas.aaid}}_1.jpg');" uk-height-viewport></div>
               <div class="uk-padding-large">
                   <h1>{{ruinas.name}}</h1>
 
@@ -117,8 +117,7 @@ permalink:  /ruinas
                       {% if item.code == ruinas.place %}
                       {{ item.name }}
                       {% endif %}
-                      {% endfor %}, Spain, <a id="link-{{ forloop.index }}" target="_blank" href=""
-data-caption="{{ruinas.name}}">View on Maps</a>
+                      {% endfor %}, Spain, <a id="link-{{ forloop.index }}" target="_blank" href="" data-caption="{{ruinas.name}}">View on Maps</a>
 
 
 
