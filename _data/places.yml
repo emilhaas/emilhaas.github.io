@@ -11,10 +11,25 @@
   name: Almuña
 
 - code: vl
-  name: Villar de luarca
+  name: Villar de Luarca
 
 - code: mu
   name: Las Murias
 
 - code: bu
-  name: Bustiello de ayones
+  name: Bustiello de Ayones
+  
+  - code: ae
+  name: Alienes
+
+  - code: ct
+  name: Castañedo
+    
+  - code: or
+  name: Ore
+    
+  - code: ot
+  name: Otur
+    
+  - code: co
+  name: Constancios
