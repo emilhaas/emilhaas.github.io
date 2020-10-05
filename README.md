@@ -3,7 +3,7 @@
 
 El objetivo de este proyecto es dar visibilidad a un problema que afecta a todo el medio rural de España, que es la gran cantidad de edificios abandonados y el lamentable estado en que se encuentran la mayoría de ellos.
 
-This project´s aim is to give visibility to a problem that affects the whole rural environment of spain, which is the large amount of abandoned builldings and the regrettable state that most oft hem are in.
+This project´s aim is to give visibility to a problem that affects the whole rural environment of spain, which is the large amount of abandoned builldings and the regrettable state that most of them are in.
 
 
 ## Añade una nueva ruina
