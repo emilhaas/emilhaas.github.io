@@ -34,7 +34,7 @@ You can also submit a new   building and we update/add it to the database. For t
 - Latitude
 - Longitude
 - Description
-- Ort
-- Stockwerke
-- Zustand
+- Location
+- Floors
+- Condition
 - Images
