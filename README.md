@@ -6,7 +6,7 @@ This project´s aim is to give visibility to a problem that affects the whole ru
 ## Añade una nueva ruina
 
 
-Si usted o su universidad quieren contribuir a este proyecto, pueden contactarme en <a href="mailto:emilhm@gmx.at?subject=Nueva%20ruina">emilhaas@gmx.at</a>.
+Si usted o su universidad quieren contribuir a este proyecto, pueden contactarme en <a href="mailto:emilhm@gmx.at?subject=Nueva%20ruina">emilhm@gmx.at</a>.
 
 También puede informarnos sobre un edificio vacante y lo incluiremos en el catálogo. Para ello necesitamos los siguientes datos:
 
