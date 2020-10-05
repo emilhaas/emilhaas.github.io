@@ -25,7 +25,7 @@ Tambi√©n puede informarnos sobre un edificio vacante y lo incluiremos en el cat√
             </ul>
             
             
-## Add a new ruin
+## Add a new building
 If you or your university would like to contribute to this project, you can contact me at emilhm@gmx.at.
 
 You can also submit a new   building and we update/add it to the database. For this we need the following information:
