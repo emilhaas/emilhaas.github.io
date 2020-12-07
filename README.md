@@ -8,12 +8,12 @@ El objetivo de este proyecto es dar visibilidad a un problema que afecta a todo 
 This project´s aim is to give visibility to a problem that affects the whole rural environment of spain, which is the large amount of abandoned builldings and the regrettable state that most of them are in.
 
 
-## Añade una nueva ruina
+## Añadir un nuevo edificio a la base de datos
 
 
 Si usted o su universidad quieren contribuir a este proyecto, pueden contactarme en <a href="mailto:emilhm@gmx.at?subject=Nueva%20ruina">emilhm@gmx.at</a>.
 
-También puede informarnos sobre un edificio vacante y lo incluiremos en el catálogo. Para ello necesitamos los siguientes datos:
+También pueden informarnos sobre edificios que puedan ser incluidos en la base de datos Para ello necesitamos los siguientes datos:
 
  <ul>
    <li>Nombre</li>
@@ -27,10 +27,12 @@ También puede informarnos sobre un edificio vacante y lo incluiremos en el cat�
             </ul>
             
             
-## Add a new building
+## Adding a new building to the database
+
+
 If you or your university would like to contribute to this project, you can contact me at emilhm@gmx.at.
 
-You can also submit a new   building and we update/add it to the database. For this we need the following information:
+You can also submit buildings that could be included in the database. For this we need the following informations:
 
 -  Name
 - Latitude
