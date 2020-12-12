@@ -1,49 +1,53 @@
 - code: ae
   name: Alienes
-  
-- code: al  
+
+- code: al
   name: Almuña
-  
+
 - code: ar
   name: Arnizo
-  
+
+- code: br
+  name: Brieves
+
 - code: bu
   name: Bustiello de Ayones
-  
-- code: ca  
+
+- code: ca
   name: Cadavedo
-  
+
+- code: cb
+  name: Caborno
+
 - code: co
   name: Castañedo
-  
+
 - code: ct
   name: Constancios
-  
-- code: mu  
+
+- code: cy
+  name: Caroyas
+
+- code: ga
+  name: Gallinero
+
+- code: mu
   name: Las Murias
-  
-- code: or  
+
+- code: or
   name: Ore
-  
-- code: ot  
+
+- code: ot
   name: Otur
-  
-- code: si  
+
+- code: si
   name: Silvamayor
-  
+
+- code: ta
+  name: Tablizo
+
 - code: vi
   name: Villademoros
-  
-- code: vl  
+
+- code: vl
   name: Villar de Luarca
-
-
-
-
-
-
-
-
-
-
-
