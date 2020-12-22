@@ -9,6 +9,7 @@ permalink: /buenaspracticas
 
 
   <div class="uk-container">
+    
     <form>
     <fieldset class="uk-fieldset">
 
@@ -44,11 +45,11 @@ permalink: /buenaspracticas
         </div>
 
         <div class="uk-margin">
-            <textarea class="uk-textarea" rows="2" placeholder="Descripción (Lugar y alrededores)"></textarea>
+            <textarea class="uk-textarea" rows="3" placeholder="Descripción (Lugar y alrededores)"></textarea>
         </div>
 
       <div class="uk-margin">
-            <textarea class="uk-textarea" rows="2" placeholder="Descripción (Edificio)"></textarea>
+            <textarea class="uk-textarea" rows="6" placeholder="Descripción (Edificio)"></textarea>
         </div>
 
           <div class="uk-margin">
@@ -62,7 +63,14 @@ permalink: /buenaspracticas
           
             </select>
         </div>
-
+ <div class="uk-margin" uk-margin>
+    <p>Añade imágenes del edificio. Las cuatro fachadas, vanos, detalles de interés, etc... </p>
+        <div uk-form-custom="target: true">
+            <input type="file">
+            <input class="uk-input uk-form-width-medium" type="text" placeholder="Escoger imágenes" enabled>
+        </div>
+        <button class="uk-button uk-button-default">Añadir</button>
+    </div>
     </fieldset>
 </form>
       
