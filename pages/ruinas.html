@@ -118,19 +118,17 @@ title: "Ver edificios"
           <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
               <div class="uk-background-cover" style="background-image: url('/images/{{ruina.aaid}}/{{ruina.aaid}}_1.jpg');" uk-height-viewport></div>
               <div class="uk-padding-large">
-                  <h1>{{ruinas.name}}</h1>
-
-
+                  <h1>{{ruina.name}}</h1>
 
                       <span uk-icon="icon: location; ratio: 1"></span>
                       {% for item in site.data.places %}
                       {% if item.code == ruina.place %}
                       {{ item.name }}
                       {% endif %}
-                      {% endfor %}, Spain, <a id="link-{{ forloop.index }}" target="_blank" href="" data-caption="{{ruinas.name}}"></a>
+                      {% endfor %}, Spain <a id="link-{{ forloop.index }}" target="_blank" href="" data-caption="{{ruinas.name}}"></a>
 
 
-
+          
 <p>{{ruina.desc1}}</p>
 <p>{{ruina.desc2}}</p>
 
@@ -144,7 +142,7 @@ title: "Ver edificios"
                 
                 
 
-                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="min-height: 300; max-height: 600; animation: push">
+                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
 
     <ul class="uk-slideshow-items">
       
