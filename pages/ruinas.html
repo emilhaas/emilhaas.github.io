@@ -151,7 +151,7 @@ title: "Ver edificios"
        {% for i in (2..image_count)  %}
                   
                           <li>
-            <img src="images//images/{{ruina.aaid}}/{{ruina.aaid}}_{{ i }}.jpg" alt="" uk-cover>
+            <img src="/images/{{ruina.aaid}}/{{ruina.aaid}}_{{ i }}.jpg" alt="" uk-cover>
         </li>
        {% capture image_count %}{{ i | plus:1 }}{% endcapture %}
                 {% endfor %}
