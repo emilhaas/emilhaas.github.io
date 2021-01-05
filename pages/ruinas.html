@@ -61,10 +61,9 @@ title: "Ver edificios"
                 <a   class="uk-card uk-card-default uk-card-small" href="#modal{{ forloop.index }}
 " uk-toggle>
                     <div class="uk-card-media-top">
-                         <img data-src="/images/{{ruina.aaid}}/{{ruina.aaid}}_1.jpg" data-width="" data-height="" alt="" uk-img  alt="{{ruina.name}}" ></img>
-                  
-     
-                      
+                      <img data-src="/images/{{ruina.aaid}}/{{ruina.aaid}}_1.jpg" data-width="" data-height="" alt="" uk-img  alt="{{ruina.name}}">
+
+                        <img >
                     </div>
 
 
@@ -117,30 +116,7 @@ title: "Ver edificios"
       <div class="uk-modal-dialog">
           <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
           <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
-              <div class="uk-background-cover" uk-height-viewport></div>
-                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
-
-    <ul class="uk-slideshow-items">
-      
-        <li>
-                                 <img data-src="/images/{{ruina.aaid}}/{{ruina.aaid}}_1.jpg" data-width="" data-height="" alt="" uk-img  alt="{{ruina.name}}"  uk-cover></img>
-
-        </li>
-        <li>
-                                                 <img data-src="/images/{{ruina.aaid}}/{{ruina.aaid}}_1.jpg" data-width="" data-height="" alt="" uk-img  alt="{{ruina.name}}"  uk-cover></img>
-               
-
-        </li>
-    </ul>
-
-    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
-
-</div>
-                      
-            
-            
-            
+              <div class="uk-background-cover" style="background-image: url('/images/{{ruina.aaid}}/{{ruina.aaid}}_1.jpg');" uk-height-viewport></div>
               <div class="uk-padding-large">
                   <h1>{{ruinas.name}}</h1>
 
@@ -162,13 +138,15 @@ title: "Ver edificios"
        
 
                
+                  
+                
                 {% assign image_count = ruina.imgcount %}
                 
                 {% for i in (2..image_count)  %}
-                        {% capture image_count %}{{ i | plus:1 }}{% endcapture %}
+                    <p>{{ i }}</p>
                 {% endfor %}
 
-                  Amount: {{ image_count }}
+
 
                   <div id="map"></div>
 
