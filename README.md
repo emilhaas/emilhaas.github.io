@@ -30,7 +30,7 @@ También pueden informarnos sobre edificios que puedan ser incluidos en la base 
 ## Adding a new building to the database
 
 
-If you or your university would like to contribute to this project, you can contact me at emilhm@gmx.at.
+If you or your university would like to contribute to this project, you can contact me at <a href="mailto:valdesvacio@gmail.com?subject=Nueva%20ruina">valdesvacio@gmail.com</a>.
 
 You can also submit buildings that could be included in the database. For this we need the following informations:
 
