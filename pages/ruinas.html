@@ -143,12 +143,9 @@ title: "Ver edificios"
                   
                 
                 {% assign image_count = ruina.imgcount %}
+                
                 {% for i in image_count %}
-                    {% if forloop.first == true %}
-                        
-                    {% else %}
-                         <p>{{ image_count }}</p>
-                    {% endif %}
+                    <p>{{ i }}</p>
                 {% endfor %}
 
 
