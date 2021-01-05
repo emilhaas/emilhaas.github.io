@@ -125,9 +125,8 @@ title: "Ver edificios"
                       {% if item.code == ruina.place %}
                       {{ item.name }}
                       {% endif %}
-                      {% endfor %}, Spain <a id="link-{{ forloop.index }}" target="_blank" href="" data-caption="{{ruinas.name}}"></a>
-
-
+                      {% endfor %}, Spain, <a  target="_blank" href="https://www.openstreetmap.org/?mlat={{ruina.lat}}&mlon={{ruina.long}}#map=13/{{ruina.lat}}/{{ruina.long}}&layers=N" data-caption="{{ruinas.name}}">Show on map</a>
+         
           
 <p>{{ruina.desc1}}</p>
 <p>{{ruina.desc2}}</p>
