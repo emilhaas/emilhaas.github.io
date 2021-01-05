@@ -134,13 +134,22 @@ title: "Ver edificios"
 <p>{{ruina.desc1}}</p>
 <p>{{ruina.desc2}}</p>
 
-                     {% assign image_count = ruina.imgcount %}
+                     
        
 
-          
+                  
          
-                <p>{{ image_count }}</p>
-
+               
+                  
+                
+                {% assign image_count = ruina.imgcount %}
+                {% for i in image_count %}
+                    {% if forloop.first == true %}
+                        
+                    {% else %}
+                         <p>{{ image_count }}</p>
+                    {% endif %}
+                {% endfor %}
 
 
 
