@@ -11,7 +11,7 @@ This project´s aim is to give visibility to a problem that affects the whole ru
 ## Añadir un nuevo edificio a la base de datos
 
 
-Si usted o su universidad quieren contribuir a este proyecto, pueden contactarme en <a href="mailto:emilhm@gmx.at?subject=Nueva%20ruina">emilhm@gmx.at</a>.
+Si usted o su universidad quieren contribuir a este proyecto, pueden contactarme en <a href="mailto:valdesvacio@gmail.com?subject=Nueva%20ruina">valdesvacio@gmail.com</a>.
 
 También pueden informarnos sobre edificios que puedan ser incluidos en la base de datos Para ello necesitamos los siguientes datos:
 
