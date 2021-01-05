@@ -143,9 +143,10 @@ title: "Ver edificios"
                 {% assign image_count = ruina.imgcount %}
                 
                 {% for i in (2..image_count)  %}
-                    <p>{{ i }}</p>
+                        {% capture image_count %}{{ i | plus:1 }}{% endcapture %}
                 {% endfor %}
 
+                  Amount: {{ image_count }}
 
 
                   <div id="map"></div>
