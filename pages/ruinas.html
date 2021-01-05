@@ -55,11 +55,11 @@ title: "Ver edificios"
             <ul class="js-filter uk-child-width-1-2 uk-child-width-1-4@m uk-text-center" uk-grid>
               {% assign ruinas = site.data.ruinas_neu_2 | sort: "dateadded" | reverse %}
               {% for ruina in ruinas %}
-              <li data-typo="{{ruinas.type}}" data-places="{{ruinas.place}}" data-date="{{ruinas.dateadded}}">
+              <li data-typo="{{ruina.type}}" data-places="{{ruina.place}}" data-date="{{ruina.dateadded}}">
                 <a   class="uk-card uk-card-default uk-card-small" href="#modal{{ forloop.index }}
 " uk-toggle>
                     <div class="uk-card-media-top">
-                      <img data-src="/images/{{ruinas.aaid}}/{{ruinas.aaid}}_1.jpg" data-width="" data-height="" alt="" uk-img  alt="{{ruinas.name}}">
+                      <img data-src="/images/{{ruina.aaid}}/{{ruina.aaid}}_1.jpg" data-width="" data-height="" alt="" uk-img  alt="{{ruina.name}}">
 
                         <img >
                     </div>
@@ -89,7 +89,7 @@ title: "Ver edificios"
 
 
 
-            {% assign ruinas = site.data.ruinas_neu_2 | | sort: "dateadded" | reverse %}
+            {% assign ruinas = site.data.ruinas_neu_2 | sort: "dateadded" | reverse %}
               {% for ruina in ruinas %}
 
             <script>
