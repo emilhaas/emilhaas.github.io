@@ -106,10 +106,10 @@ title: "Ver edificios"
 
 
 <div id="modal{{ forloop.index }}" class="uk-modal-container" uk-modal>
-  <div class="uk-modal-dialog uk-modal-body">
+  <div class="uk-modal-dialog uk-modal-body" uk-overflow-auto>
     <button class="uk-modal-close-default" type="button" uk-close></button>
-    <div uk-grid>
-      <div class="uk-width-1-5@m">
+    <div class="uk-flex uk-flex-middle " uk-grid>
+      <div class="uk-width-1-4@m">
         <h2 class="uk-modal-title">{{ruina.name}}</h2>
 
         <span uk-icon="icon: location; ratio: 1"></span>
