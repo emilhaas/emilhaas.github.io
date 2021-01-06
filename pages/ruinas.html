@@ -115,9 +115,9 @@ title: "Ver edificios"
             <div id="modal{{ forloop.index }}" class="uk-modal-full" uk-modal>
       <div class="uk-modal-dialog">
           <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
-          <div class="uk-grid-collapse uk-child-width-1-1 uk-flex-middle uk-padding-large" uk-grid>
-         
-                  <h1>{{ruina.name}}</h1>
+<div uk-grid>
+    <div class="uk-width-1-5@m">
+   <h1>{{ruina.name}}</h1>
 
                       <span uk-icon="icon: location; ratio: 1"></span>
                       {% for item in site.data.places %}
@@ -130,12 +130,10 @@ title: "Ver edificios"
 <p>{{ruina.desc1}}</p>
 <p>{{ruina.desc2}}</p>
 
-                     
-       
-
-               
-                  
-                
+  
+  </div>
+    <div class="uk-width-expand@m">
+        
                 {% assign image_count = ruina.imgcount %}
                 
                 
@@ -158,8 +156,14 @@ title: "Ver edificios"
     <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
     <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
 
-</div>
+
                     
+  </div>
+</div>
+        
+        
+          
+          
             
              
           </div>
