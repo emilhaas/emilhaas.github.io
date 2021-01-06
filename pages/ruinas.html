@@ -1,21 +1,18 @@
 ---
 layout: default
-permalink:  /ruinas
+permalink: /ruinas
 title: "Ver edificios"
 
 ---
-
-
-  <div class="uk-section uk-section-small uk-section-muted">
-
-    <div class="uk-container-expand uk-padding-small">
-      <div uk-filter="target: .js-filter">
-        <div class="uk-grid-small" uk-grid>
-          <div class="uk-width-1-5@m uk-width-1-1">
+<div class="uk-section uk-section-small uk-section-muted">
+  <div class="uk-container-expand uk-padding-small">
+    <div uk-filter="target: .js-filter">
+      <div class="uk-grid-small" uk-grid>
+        <div class="uk-width-1-5@m uk-width-1-1">
           <div class="uk-card uk-card-default uk-card-body">
             <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
               <li class="uk-active" uk-filter-control="sort: data-date; order: desc"><a href="#">Todas</a></li>
-                       <li class="uk-nav-divider"></li>
+              <li class="uk-nav-divider"></li>
 
               <li class="uk-parent">
                 <a href="#">Pueblos</a>
@@ -25,7 +22,7 @@ title: "Ver edificios"
                   {% endfor %}
                 </ul>
               </li>
-              
+
               <li class="uk-parent">
                 <a href="#">Tipología </a>
                 <ul class="uk-nav-sub">
@@ -33,141 +30,131 @@ title: "Ver edificios"
                   <li uk-filter-control="filter: [data-typo='{{ item.code }}']; group: typo"><a href="#">{{ item.name }}</a></li>
                   {% endfor %}
                 </ul>
-                
+
               </li>
               <li class="uk-parent">
                 <a href="#">Fecha Añadido</a>
                 <ul class="uk-nav-sub">
-                   <li uk-filter-control="sort: data-date"><a href="#">Primeras primero</a></li>
-                   <li uk-filter-control="sort: data-date; order: desc"><a href="#">Últimas primero</a></li>
+                  <li uk-filter-control="sort: data-date"><a href="#">Primeras primero</a></li>
+                  <li uk-filter-control="sort: data-date; order: desc"><a href="#">Últimas primero</a></li>
                 </ul>
               </li>
-        <li class="uk-nav-divider"></li>
+              <li class="uk-nav-divider"></li>
 
               <li><a href="/mapa">Ver Mapa</a></li>
 
-             
-              
+
+
             </ul>
           </div>
-          </div>
+        </div>
 
-          <div class="uk-width-expand@m">
+        <div class="uk-width-expand@m">
 
-            <ul class="js-filter uk-child-width-1-1 uk-child-width-1-4@m uk-text-center" uk-grid>
-              {% assign ruinas = site.data.ruinas_neu_2 | sort: "dateadded" | reverse %}
-              {% for ruina in ruinas %}
-              <li data-typo="{{ruina.type}}" data-places="{{ruina.place}}" data-date="{{ruina.dateadded}}">
-                <a   class="uk-card uk-card-default uk-card-small" href="#modal{{ forloop.index }}
-" uk-toggle>
-                    <div class="uk-card-media-top">
-                      <img data-src="/images/{{ruina.aaid}}/{{ruina.aaid}}_1.jpg" data-width="" data-height="" alt="" uk-img  alt="{{ruina.name}}">
+          <ul class="js-filter uk-child-width-1-1 uk-child-width-1-4@m uk-text-center" uk-grid>
+            {% assign ruinas = site.data.ruinas_neu_2 | sort: "dateadded" | reverse %}
+            {% for ruina in ruinas %}
+            <li data-typo="{{ruina.type}}" data-places="{{ruina.place}}" data-date="{{ruina.dateadded}}">
+              <a class="uk-card uk-card-default uk-card-small" href="#modal{{ forloop.index }}
+              " uk-toggle>
+                <div class="uk-card-media-top">
+                  <img data-src="/images/{{ruina.aaid}}/{{ruina.aaid}}_1.jpg" data-width="" data-height="" alt="" uk-img alt="{{ruina.name}}">
 
-                        <img >
-                    </div>
+                  <img>
+                </div>
 
 
-                </a>
-                </li>
-              {% endfor %}
+              </a>
+            </li>
+            {% endfor %}
 
-            </ul>
-
-          </div>
+          </ul>
 
         </div>
 
-
-
       </div>
+
+
+
     </div>
+  </div>
 
 
 
 
-            </div>
+</div>
 
 
 
 
 
-            {% assign ruinas = site.data.ruinas_neu_2 | sort: "dateadded" | reverse %}
-              {% for ruina in ruinas %}
+{% assign ruinas = site.data.ruinas_neu_2 | sort: "dateadded" | reverse %}
+{% for ruina in ruinas %}
 
-            <script>
-  var obj = {% include ruinas.geojson %};
+<script>
+  var obj = {
+    % include ruinas.geojson %
+  };
   var myJSON = JSON.stringify(obj);
   var a = document.getElementById('link-{{ forloop.index }}');
   document.getElementById('link-{{ forloop.index }}').href = '"http://geojson.io/#data=data:application/json,' + myJSON + '"';
-
-  </script>
-
+</script>
 
 
 
 
 
+<div id="modal{{ forloop.index }}" class="uk-modal-container" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body">
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    <div uk-grid>
+      <div class="uk-width-1-5@m">
+        <h2 class="uk-modal-title">{{ruina.name}}</h1>
+
+          <span uk-icon="icon: location; ratio: 1"></span>
+          {% for item in site.data.places %}
+          {% if item.code == ruina.place %}
+          {{ item.name }}
+          {% endif %}
+          {% endfor %}, Spain, <a target="_blank" href="https://www.openstreetmap.org/?mlat={{ruina.lat}}&mlon={{ruina.long}}#map=15/{{ruina.lat}}/{{ruina.long}}&layers=CN" data-caption="{{ruinas.name}}">Show on map</a>
+
+
+          <p>{{ruina.desc1}}</p>
+          <p>{{ruina.desc2}}</p>
+      </div>
+      <div class="uk-width-expand@m">
+
+        {% assign image_count = ruina.imgcount %}
 
 
 
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+
+          <ul class="uk-slideshow-items">
+
+            {% for i in (1..image_count)  %}
+
+            <li>
+              <img src="/images/{{ruina.aaid}}/{{ruina.aaid}}_{{ i }}.jpg" alt="" uk-cover>
+            </li>
+            {% capture image_count %}{{ i | plus:1 }}{% endcapture %}
+            {% endfor %}
 
 
-            <div id="modal{{ forloop.index }}" class="uk-modal-full" uk-modal>
-      <div class="uk-modal-dialog">
-          <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
-<div uk-grid>
-    <div class="uk-width-1-5@m">
-   <h1>{{ruina.name}}</h1>
+          </ul>
 
-                      <span uk-icon="icon: location; ratio: 1"></span>
-                      {% for item in site.data.places %}
-                      {% if item.code == ruina.place %}
-                      {{ item.name }}
-                      {% endif %}
-                      {% endfor %}, Spain, <a  target="_blank" href="https://www.openstreetmap.org/?mlat={{ruina.lat}}&mlon={{ruina.long}}#map=15/{{ruina.lat}}/{{ruina.long}}&layers=CN" data-caption="{{ruinas.name}}">Show on map</a>
-         
-          
-<p>{{ruina.desc1}}</p>
-<p>{{ruina.desc2}}</p>
-
-  
-  </div>
-    <div class="uk-width-expand@m">
-        
-                {% assign image_count = ruina.imgcount %}
-                
-                
-
-                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
-
-    <ul class="uk-slideshow-items">
-      
-       {% for i in (1..image_count)  %}
-                  
-                          <li>
-            <img src="/images/{{ruina.aaid}}/{{ruina.aaid}}_{{ i }}.jpg" alt="" uk-cover>
-        </li>
-       {% capture image_count %}{{ i | plus:1 }}{% endcapture %}
-                {% endfor %}
-      
-   
-    </ul>
-
-    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
 
 
-                    
+
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-        
-        
-          
-          
-            
-             
-          </div>
-      </div>
-  </div>
 
-  {% endfor %}
+
+
+
+{% endfor %}
